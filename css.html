@@ -570,24 +570,206 @@
 
 	  <h3>Values</h3>
 	  <h4>Background</h4>
-	  <h5>(shorthand) background:</h5>
-	  <ul>
-		  <li>Attachment value: scroll, fixed</li>
-		  <li>Blend mode value: dark, light</li>
-		  <li>Clip value: content-box, padding-box, border-box</li>
-		  <li>Color value: rgba(255, 0, 255, 0.3)</li>
-		  <li>Image value: url('cat.png')</li>
-		  <li>Origin value: content-box, padding-box, border-box</li>
-		  <li>Position value: top, 50% 50%</li>
-		  <li>Repeat value: repeat, repeat-x, round</li>
-		  <li>Size value: contain, cover</li>
-	  </ul>
-	  <h5>background-attachment</h5>
-	  <ul>
-		  <li>scroll - is the default value. The background image will scroll with the page.</li>
-		  <li>fixed - will cause the background image to stay in the same position on the page.</li>
-		  <li>local - will result in the background image scrolling within the elements contents.</li>
-	  </ul>
+	  <table>
+		  <tr>
+			  <th>Property</th>
+			  <th>Value</th>
+		  </tr>
+		  <tr>
+			  <td>background:</td>
+			  <td> 
+				  <ul>
+		  
+					  <li>Attachment value: scroll, fixed</li>
+		  
+					  <li>Blend mode value: dark, light</li>
+		  
+					  <li>Clip value: content-box, padding-box, border-box</li>
+		  
+					  <li>Color value: rgba(255, 0, 255, 0.3)</li>
+		  
+					  <li>Image value: url('cat.png')</li>
+		  
+					  <li>Origin value: content-box, padding-box, border-box</li>
+		  
+					  <li>Position value: top, 50% 50%</li>
+		  
+					  <li>Repeat value: repeat, repeat-x, round</li>
+		  
+					  <li>Size value: contain, cover</li>
+	 
+				  </ul>
+			  </td>
+		  </tr>
+		  <tr>
+			  <td>background-attachment</td>
+			  <td>
+				  	  <ul>
+		  
+						  <li>scroll - is the default value. The background image will scroll with the page.</li>
+		  
+						  <li>fixed - will cause the background image to stay in the same position on the page.</li>
+		  
+						  <li>local - will result in the background image scrolling within the elements contents.</li>
+	  
+					  </ul>
+			  </td>
+		  </tr>
+		  <tr>
+			  <td>background-blend-mode</td>
+			  <td>
+				  <ul>
+					  <li>normal</li>
+					  <li>multiple</li>
+					  <li>screen</li>
+					  <li>overlay</li>
+					  <li>darken</li>
+					  <li>lighten</li>
+					  <li>color-dodge</li>
+					  <li>color-burn</li>
+					  <li>hard-light</li>
+					  <li>soft-light</li>
+					  <li>difference</li>
+					  <li>exclusion</li>
+					  <li>hue</li>
+					  <li>saturation</li>
+					  <li>color</li>
+					  <li>luminosity</li>
+				  </ul>
+			  </td>
+		  </tr>
+		  <tr>
+			  <td>background-clip</td>
+			  <td>
+				  <ul>
+					  <li>border-box</li>
+					  <li>content-box</li>
+					  <li>padding-box</li>
+					  <li>text</li>
+					  <li>initial</li>
+				  </ul>
+			  </td>
+		  </tr>
+		  <tr>
+			  <td>background-color</td>
+			  <td>
+				  <ul>
+					  <li>Color keyword: blue, transparent, rebeccapurple</li>
+					  <li>Hexadecimal value: #FF0000</li>
+					  <li>RGB value: rgb(255, 0, 0)</li>
+					  <li>RGBA value: rgba(255, 0, 255, 0.3)</li>
+					  <li>HSL value: hsl(0, 100%, 50%)</li>
+					  <li>HSLA value: hsla(180, 80%, 100%, 0.8)</li>
+					  <li>Special keyword values: currentColor, transparent</li>
+				  </ul>
+			  </td>
+		  </tr>
+		  <tr>
+			  <td>background-image</td>
+			  <td>
+				  <ul>
+					  <li>URL Functions Value</li>
+					  <li>Gradient Values</li>
+					  <ul>
+						  <li>linear-gradient(0deg, #C1D279, #4062BF)</li>
+						  <li>repeating-linear-gradient(0deg, #1D4D19, #191A4D 10px)</li>
+						  <li>radial-gradient(circle at top, #40BFA5, #BB40BF)</li>
+						  <li>repeating-radial-gradient(#1D4D19, #191A4D 10px)</li>
+					  </ul>
+				  </ul>
+			  </td>
+		  </tr>
+		  <tr>
+			  <td>background-origin</td>
+			  <td>
+				  <ul>
+					  <li>content-box: Relative positioning to the content box.</li>
+					  <li>padding-box: Relative positioning to the padding box.</li>
+					  <li>border-box: Relative positioning to the border box.</li>
+					  <li>Global values: inherit, initial, revert, unset</li>
+				  </ul>
+			  </td>
+		  </tr>
+		  <tr>
+			  <td>background-position</td>
+			  <td>
+				  <ul>
+					  <li>Position keyword: left, right, left top, bottom, bottom center</li>
+					  <li>X% Y%: 25% 75%, 50%, 50%</li>
+					  <li>Length value: 25px 25px, 4em 2em</li>
+				  </ul>
+			  </td>
+		  </tr>
+		  <tr>
+			  <td>background-size</td>
+			  <td>
+				  <ul>
+					  <li>contain: scales the image as much as possible while keeping the aspect ratio and avoids clipping the image.</li>
+					  <li>cover: scales the image and maintains its aspect ratio, but this time the image will fill the whole area of the element and some clipping may occur.</li>
+					  <li>auto: tells the browser to automatically calculate the size based on the actual size of the image and the aspect ratio.</li>
+					  <li>Length value: 50%, 100px 50px</li>
+				  </ul>
+			  </td>
+		  </tr>
+	  </table>
+	  <h3>Borders</h3>
+	  <table>
+		  <tr>
+			  <th>Property</th>
+			  <th>Value</th>
+		  </tr>
+		  <tr>
+			  <td>(shothand) border</td>
+			  <td>
+				  <ul>
+					  <li>border-style(required)</li>
+					  <li>border-color</li>
+					  <li>border-width</li>
+				  </ul>
+			  </td>
+		  </tr>
+		  		 
+		  <tr>
+			  <td>border-color</td>
+			  <td>
+				 <ul>
+					  <li>Color keyword: blue, transparent, rebeccapurple</li>
+					  <li>Hexadecimal value: #FF0000</li>
+					  <li>RGB value: rgb(255, 0, 0)</li>
+					  <li>RGBA value: rgba(255, 0, 255, 0.3)</li>
+					  <li>HSL value: hsl(0, 100%, 50%)</li>
+					  <li>HSLA value: hsla(180, 80%, 100%, 0.8)</li>
+					  <li>Special keyword values: currentColor, transparent</li>
+				  </ul>
+			  </td>
+		  </tr>
+		  <tr>
+			  <td>border-radius</td>
+			  <td>pixel size</td>
+		  </tr>
+		  <tr>
+			  <td>border-style</td>
+			  <td>
+				  <ul>
+					  <li>none</li>
+					  <li>hidden</li>
+					  <li>dotted</li>
+					  <li>dashed</li>
+					  <li>solid</li>
+					  <li>double</li>
+					  <li>groove</li>
+					  <li>ridge</li>
+					  <li>inset</li>
+					  <li>outset</li>
+				  </ul>
+			  </td>
+		  </tr>
+		  <tr>
+			  <td>border-width</td>
+			  <td></td>
+		  </tr>
+	  </table>
+
 	  
   </body>
 </html>
