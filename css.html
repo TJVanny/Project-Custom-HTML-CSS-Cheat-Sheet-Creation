@@ -870,8 +870,308 @@
 
 <h2>Grids</h2>
 <p>CSS Grid is a two-dimensional grid-based layout system that uses rows, columns, and gaps to organize content on a web page. This system helps with creating a responsive layout for web pages without having to use positioning, floats, or flexbox.</p>
+<table>
+  <tr>
+    <th>Property</th>
+    <th>Description</th>
+    <th>Syntax</th>
+    <th>Values</th>
+  </tr>
+  <tr>
+    <td>grid</td>
+    <td>Shorthand for setting multiple grid property values.</td>
+    <td>
+    <ul>
+      <li>grid-template-rows</li>
+      <li>grid-template-columns</li>
+      <li>grid-template-areas</li>
+      <li>grid-auto-rows</li>
+      <li>grid-auto-columns</li>
+      <li>grid-auto-flow</li>
+    </ul>
+    </td>
+  </tr>
+  <tr>
+    <td>grid-area</td>
+    <td>A property used to identify an element within a grid template or specify the location of an element within a grid.</td>
+    <td>.item-one {
+  grid-area: &lt;area-value&gt;;
+}</td>
+    <td>
+      <ul>
+        <li>Grid keyword: auto, span</li>
+        <li>Grid line value: 2</li>
+        <li>Grid line name: section-a-start</li>
+        <li>A string: 'header'</li>
+      </ul>
+    </td>
+  </tr>
+  <tr>
+    <td>grid-auto-columns</td>
+    <td>A property that specifies the default column size(s) for a container.</td>
+    <td>.grid-container {
+  display: grid;
+  grid-auto-columns: &lt;col-value&gt;;
+}</td>
+    <td>
+      <ul>
+        <li>Grid keyword: auto, maxcontent, minmax()</li>
+        <li>Pixel value: 300px</li>
+        <li>Percent value: 25%</li>
+        <li>Fractional unit value: 1fr</li>
+      </ul>
+    </td>
+  </tr>
+  <tr>
+    <td>grid-auto-rows</td>
+    <td>A property that specifies the default row size(s) for a container.</td>
+    <td>.grid-container {
+  display: grid;
+  grid-auto-rows: &lt;row-value&gt;;
+}</td>
+    <td>
+      <ul>
+        <li>Grid keyword: auto, maxcontent, minmax()</li>
+        <li>Pixel value: 300px</li>
+        <li>Percent value: 25%</li>
+        <li>Fractional unit value: 1fr</li>
+      </ul>
+    </td>
+  </tr>
+  <tr>
+    <td>grid-column</td>
+    <td>Specifies the span of content over a set of columns within a grid framework.</td>
+    <td>#some-text {
+  grid-column: &lt;grid-value&gt;;
+}</td>
+    <td>
+      <ul>
+        <li>Grid keyword: auto, span</li>
+        <li>Grid line value: 1</li>
+        <li>Grid line name: main-content-start</li>
+      </ul>
+    </td>
+  </tr>
+  <tr>
+    <td>grid-column-end</td>
+    <td>Specifies the end of a content span over a set of columns within a grid framework.</td>
+    <td>.some-text {
+  grid-column-end: &lt;grid-value&gt;;
+}</td>
+    <td>
+      <ul>
+        <li>Grid keyword: auto</li>
+        <li>Grid line value: 1</li>
+        <li>Grid line name: article-content-start</li>
+      </ul>
+    </td>
+  </tr>
+  <tr>
+    <td>grid-column-gap</td>
+    <td>Specifies the spacing between column elements within a grid framework.</td>
+    <td>.div-container {
+  column-gap: &lt;gap-value&gt;;
+}</td>
+    <td>
+      <ul>
+        <li>Grid keyword: normal</li>
+        <li>Pixel value: 3px</li>
+        <li>A percentage: 1%</li>
+      </ul>
+    </td>
+  </tr>
+  <tr>
+    <td>grid-column-start</td>
+    <td>A property that specifies the start of a content span over a set of columns within a grid framework.</td>
+    <td>.some-text {
+  grid-column-start: &lt;grid-value&gt;;
+}</td>
+    <td>
+      <ul>
+        <li>Grid keyword: auto</li>
+        <li>Grid line value: 1</li>
+        <li>Grid line name: main-content-start</li>
+      </ul>
+    </td>
+  </tr>
+  <tr>
+    <td>grid-gap</td>
+    <td>Specifies the spacing between grid elements within a grid framework.</td>
+    <td>.div-container {
+  grid-gap: &lt;gap-value&gt;;
+}</td>
+    <td>      
+      <ul>
+        <li>Grid keyword: normal</li>
+        <li>Pixel value: 3px</li>
+        <li>A percentage: 1%</li>
+      </ul>
+    </td>
+  </tr>
+  <tr>
+    <td>grid-row</td>
+    <td>Specifies the span of content over a set of rows within a grid framework.</td>
+    <td>#some-text {
+  grid-row: &lt;grid-value&gt;;
+}</td>
+    <td>
+      <ul>
+        <li>Grid keyword: auto</li>
+        <li>Grid line value: 1</li>
+        <li>Grid line name: main-content-start</li>
+      </ul>
+    </td>
+  </tr>
+  <tr>
+    <td>grid-row-end</td>
+    <td>Specifies the end of a content span over a set of rows within a grid framework.</td>
+    <td>#some-text {
+  grid-row-end: &lt;grid-value&gt;;
+}</td>
+    <td>
+      <ul>
+        <li>Grid keyword: auto</li>
+        <li>Grid line value: 1</li>
+        <li>Grid line name: article-content-start</li>
+      </ul>
+    </td>
+  </tr>
+  <tr>
+    <td>grid-row-gap</td>
+    <td>A property that specifies the spacing between row elements within a grid framework.</td>
+    <td>.div-container {
+  grid-gap: &lt;gap-value&gt;;
+}</td>
+    <td>      
+      <ul>
+        <li>Grid keyword: normal</li>
+        <li>Pixel value: 3px</li>
+        <li>A percentage: 1%</li>
+      </ul>
+    </td>
+  </tr>
+  <tr>
+    <td>grid-row-start</td>
+    <td>A property that specifies the start of a content span over a set of rows within a grid framework.</td>
+     <td>.some-text {
+  grid-row-start: &lt;grid-value&gt;;
+}</td>
+    <td>
+      <ul>
+        <li>Grid keyword: auto</li>
+        <li>Grid line value: 1</li>
+        <li>Grid line name: article-content-start</li>
+      </ul>
+    </td>
+  </tr>
+  <tr>
+    <td>grid-template</td>
+    <td>A shorthand for the grid-template-row, column and areas properties. The grid-template syntax allows for a condensed specification of a grid structure and the location of elements.</td>
+    <td>.grid-container {
+  display: grid;
+  grid-template: &lt;grid-value&gt;;
+}</td>
+    <td>
+      <ul>
+        <li>Grid keyword: auto, minmax(), repeat()</li>
+        <li>Pixel value: 300px</li>
+        <li>Percent value: 25%</li>
+        <li>Fractional unit value: 1fr</li>
+        <li>A string: 'header'</li>
+      </ul>
+    </td>
+  </tr>
+  <tr>
+    <td>grid-template-areas</td>
+    <td>Defines a grid template by referencing the names of the grid areas.</td>
+    <td>Each grid item can be assigned a name with the grid-area property. Then, the grid-template-areas utilizes these areas in the grid container. For these properties to work, display: grid must be set in the .grid-container.</td>
+  </tr>
+  <tr>
+    <td>grid-template-columns</td>
+    <td>A property that specifies the column structure of a grid container.</td>
+    <td>.grid-container {
+  display: grid;
+  grid-template-columns: &lt;column-space&gt; &lt;column-space&gt;;
+}</td>
+    <td>
+      <ul>
+        <li>Grid keyword: auto, minmax()</li>
+        <li>Pixel value: 300px</li>
+        <li>Percent value: 25%</li>
+        <li>Fractional unit value: 1fr</li>
+      </ul>
+    </td>
+  </tr>
+  <tr>
+    <td>grid-template-rows</td>
+    <td>A property that specifies the row structure of a grid container.</td>
+        <td>.grid-container {
+  display: grid;
+  grid-template-rows: &lt;row-space&gt; &lt;row-space&gt;;
+}</td>
+    <td>
+      <ul>
+        <li>Grid keyword: auto, minmax()</li>
+        <li>Pixel value: 300px</li>
+        <li>Percent value: 25%</li>
+        <li>Fractional unit value: 1fr</li>
+      </ul>
+    </td>
+  </tr>
+</table>
+
 <h2>Inheritance</h2>
+  <p>CSS inheritance describes how certain styles are initialized or computed depending on the CSS property and whether a value was set. Some properties are inherited with an initial, default value. Other properties are non-inherited and set to the computed value of its containing element by default.</p>
+<p>Inherited properties apply to the element and its children</p>
+  <ul>
+    <li>color</li>
+    <li>cursor</li>
+    <li>font</li>
+    <li>font-family</li>
+    <li>font-size</li>
+    <li>font-style</li>
+    <li>font-weight</li>
+    <li>letter-spacing</li>
+    <li>line-height</li>
+    <li>text-align</li>
+    <li>text-indent</li>
+    <li>text-justify</li>
+    <li>text-shadow</li>
+    <li>text-transform</li>
+    <li>visability</li>
+    <li>word-spacing</li>
+  </ul>
+<p>Non-inherited properties are not inherited by its children</p>
+                <ul>
+                  <li>All bacground properties</li>
+                  <li>All border properties</li>
+                  <li>box-sizing</li>
+                  <li>All Flexbox properties</li>
+                  <li>float</li>
+                  <li>All Grid properties</li>
+                  <li>All margin properties</li>
+                  <li>All overflow properties</li>
+                  <li>All padding properties</li>
+                  <li>All position properties</li>
+                  <li>All sizing properties</li>
+                  <li>text-decoration</li>
+                  <li>text-overflow</li>
+                  <li>transform</li>
+                  <li>transform-origin</li>
+                  <li>transform-style</li>
+                  <li>All transition properties</li>
+                </ul>
+    
 <h2>Margins</h2>
+  <p>Margin refers to the space directly outside of the box. The margin property is used to specify the size of this space.</p>
+  <p>Syntax:
+  p {
+  border: 1px solid aquamarine;
+  margin: 20px;
+}
+  </p>
+  <p>Specific Properties:</p>
+                
 <h2>Math Functions</h2>
 <h2>Overflow</h2>
 <h2>Padding</h2>
