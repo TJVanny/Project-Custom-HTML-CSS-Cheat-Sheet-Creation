@@ -1,0 +1,890 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>CSS Cheat Sheet</title>
+  </head>
+  <body>
+<h1>CSS</h1>
+
+<h2>Anatomy</h2>
+<p>The anatomy of CSS style syntax applies to the two methods of incorporating CSS into a web-page:
+<ul>
+    <li>Rulesets: A ruleset is defined within either the HTML document itself, or in one or more separate files (known as stylesheets) that use the .css extension.</li>
+    <li>Inline styles: An inline style is set in a style attribute and applies to individual HTML elements directly.</li>
+</ul>
+</p>
+
+<h2>Animations</h2>
+<table>
+    <tr>
+        <th>Animation</th>
+        <th>Description</th>
+        <th>Syntax</th>
+        <th>Values</th>
+    </tr>
+    <tr>
+        <td>@keyframes</td>
+        <td>Controls an animation with multiple intermediate steps, defining the values of the properties at each keyframe.</td>
+        <td>@keyframes animation-name {
+            <keyframe-selector> {
+              <keyframe-declaration>
+            }
+            <keyframe-selector> {
+              <keyframe-declaration>
+            }
+          }</td>
+        <td>
+            <ul>
+                <li>&lt;keyframe-selector&gt;: The selector for the element(s) to which the keyframe declaration should be applied.</li>
+                <li>&lt;keyframe-declaration&gt;: The declaration block of the keyframe, made up of the property/value pairs.</li>
+            </ul>
+        </td>
+    </tr>
+    <tr>
+        <td>animation</td>
+        <td>Shorthand property that sets the animations for an element.</td>
+        <td>animation: &lt;value&gt;;</td>
+        <td>
+            <ul>
+                <li>animation-fill-mode: forwards</li>
+                <li>animation-delay: 2s</li>
+                <li>animation-duration: 4s</li>
+                <li>animation-iteration-count: infinite</li>
+                <li>animation-direction: alternate</li>
+                <li>animation-timing-function: linear</li>
+                <li>animation-name: keyframes rule</li>
+                <li>animation-play-state: running</li>
+            </ul>
+        </td>
+    </tr>
+    <tr>
+        <td>animation-delay</td>
+        <td>Defines when an animation starts.</td>
+        <td>animation-delay: &lt;value&gt;;</td>
+        <td>
+            <ul>
+                <li>Seconds: 2s</li>
+                <li>Milliseconds: 200ms</li>
+            </ul>
+        </td>
+    </tr>
+    <tr>
+        <td>animation-direction</td>
+        <td>Determines whether an animation runs forward or in reverse on some or all of its cycles.</td>
+        <td>animation-direction: &lt;value&gt;;</td>
+        <td>
+            <ul>
+                <li>normal: Animation will play as specified.</li>
+                <li>reverse: Animation will be played in the reverse direction as specified.</li>
+                <li>alternate: causes the cycles to alternate between normal and reverse.</li>
+                <li>alternate-reverse: causes the cycles to alternate between reverse and normal.</li>
+            </ul>
+        </td>
+    </tr>
+    <tr>
+        <td>animation-duration</td>
+        <td>Defines how long an animation should take to complete.</td>
+        <td>animation-duration: &lt;value&gt;;</td>
+        <td>
+            <ul>
+                <li>Seconds: 2s</li>
+                <li>Milliseconds: 200ms</li>
+            </ul>
+        </td>
+    </tr>
+    <tr>
+        <td>animation-fill-mode</td>
+        <td>Defines what values are applied by an animation outside its execution time.</td>
+        <td>animation-fill-mode: &lt;value&gt;;</td>
+        <td>
+            <ul>
+                <li>none: Default, no animation styles will be applied outside of the animation’s execution time.</li>
+                <li>forwards: The last keyframe values computed will be retained outside of the animation’s execution time.</li>
+                <li>backwards: The initial keyframe values computed will be retained outside of the animation’s execution time.</li>
+                <li>both: Provides both forwards and backwards values to animation-fill-mode property.</li>
+            </ul>
+        </td>
+    </tr>
+    <tr>
+        <td>animation-iteration-count</td>
+        <td>Defines how many times an animation runs.</td>
+        <td>animation-iteration-count: &lt;value&gt;;</td>
+        <td>
+            <ul>
+                <li>Number value: 3, 300</li>
+                <li>infinite will run animation on endless loop</li>
+            </ul>
+        </td>
+        
+    </tr>
+    <tr>
+        <td>animation-name</td>
+        <td>Defines a comma-separated list of animations to apply to the given selector.</td>
+        <td>animation-name: &lt;value&gt;;</td>
+        <td>where &lt;value&gt; is a @keyframes rule, which contains the properties that will be animated.</td>
+    </tr>
+    <tr>
+        <td>animation-play-state</td>
+        <td>Defines whether an animation is running or paused.</td>
+        <td>animation-play-state: &lt;value&gt;;</td>
+        <td>
+            <ul>
+                <li>paused: the animation is paused.</li>
+                <li>running: the animation is running.</li>
+            </ul>
+        </td>
+    </tr>
+    <tr>
+        <td>animation-timing-function</td>
+        <td>Shapes the animation speed curve.</td>
+        <td>animation-timing-function: value;</td>
+        <td>
+            <ul>
+                <li>step-start: Easing curve for an animation that starts quickly and decelerates.</li>
+                <li>step-end: Easing curve for an animation that starts slowly and decelerates.</li>
+                <li>linear: Easing curve for an animation that maintains a constant speed.</li>
+                <li>ease: Easing curve for an animation that starts and ends smoothly.</li>
+                <li>ease-in: Easing curve for an animation that starts slowly and accelerates.</li>
+                <li>ease-out: Easing curve for an animation that starts quickly and decelerates.</li>
+                <li>ease-in-out: Easing curve for an animation that starts and ends smoothly.</li>
+                <li>cubic-bezier(): Easing curve defined using cubic Bezier functions.</li>
+            </ul>
+        </td>
+    </tr>
+</table>
+
+<h2>Background</h2>
+<table>
+    <tr>
+        <th>Background</th>
+        <th>Description</th>
+        <th>Syntax</th>
+        <th>Values</th>
+    </tr>
+    <tr>
+        <td>background</td>
+        <td>Shorthand way of expressing the various background properties of one or more element backgrounds in any order using a single declaration.</td>
+        <td>background: &lt;value&gt;;</td>
+        <td>See below for specifics</td>
+    </tr>
+    <tr>
+        <td>background-attachment</td>
+        <td>Determines if the background image is fixed in relationship to the viewport or whether it will scroll along with the rest of the page.</td>
+        <td>background-attachment: &lt;value&gt;;</td>
+        <td>
+            <ul>
+                <li>scroll - is the default value. The background image will scroll with the page.</li>
+                <li>fixed - will cause the background image to stay in the same position on the page.</li>
+                <li>local - will result in the background image scrolling within the elements contents.</li>
+                <li>initial</li>
+                <li>inherit</li>
+            </ul>
+        </td>
+    </tr>
+    <tr>
+        <td>background-blend-mode</td>
+        <td>Returns a new blended color based on the background color and the background images.</td>
+        <td>background-blend-mode: &lt;value&gt;;</td>
+        <td>
+            <ul>
+                <li>normal - is the default value which imposes simple alpha blending, as CSS has permitted since its inception.</li>
+                <li>lighten - means that the final result will show, at each pixel, either the image or its backdrop, whichever is lighter.</li>
+                <li>darken - will show, at each pixel, whichever is darker.</li>
+                <li>multiply</li>
+                <li>screen</li>
+                <li>overlay</li>
+                <li>color-dodge</li>
+                <li>color-burn</li>
+                <li>hard-light</li>
+                <li>soft-light</li>
+                <li>difference</li>
+                <li>exclusion</li>
+                <li>hue</li>
+                <li>saturation</li>
+                <li>color</li>
+                <li>luminosity</li>
+            </ul>
+        </td>
+    </tr>
+    <tr>
+        <td>background-clip</td>
+        <td>Defines the boundary within the element box at which the background is no longer drawn.</td>
+        <td>background-clip: &lt;value&gt;;</td>
+        <td>
+            <ul>
+                <li>border-box - Set background to the edge of the border</li>
+                <li>content-box - Set background to the edge of the content box</li>
+                <li>padding-box - Set background to the inside edge of the border</li>
+                <li>text - Set background within the foreground text</li>
+                <li>initial</li>
+            </ul>
+        </td>
+    </tr>
+    <tr>
+        <td>background-color</td>
+        <td>Defines a color for the background of an element.</td>
+        <td>background-color: &lt;value&gt;;</td>
+        <td>
+            <ul>
+                <li>Color keyword: blue, transparent, rebeccapurple</li>
+                <li>Hexadecimal value: #FF0000</li>
+                <li>RGB value: rgb(255, 0, 0)</li>
+                <li>RGBA value: rgba(255, 0, 255, 0.3)</li>
+                <li>HSL value: hsl(0, 100%, 50%)</li>
+                <li>HSLA value: hsla(180, 80%, 100%, 0.8)</li>
+                <li>Special keyword values: currentColor, transparent</li>
+            </ul>
+        </td>
+    </tr>
+    <tr>
+        <td>background-image</td>
+        <td>Places one or more images in the background of the element.</td>
+        <td>background-image: value | none;</td>
+        <td>
+            <ul>
+                <li>URL function value: ('cat.gif')</li>
+                    <li>Gradient values:
+                    linear-gradient(0deg, #C1D279, #4062BF)
+                    repeating-linear-gradient(0deg, #1D4D19, #191A4D 10px)
+                    radial-gradient(circle at top, #40BFA5, #BB40BF)
+                    repeating-radial-gradient(#1D4D19, #191A4D 10px)</li>
+            </ul>
+        </td>
+    </tr>
+    <tr>
+        <td>background-origin</td>
+        <td>Specifies the background positioning area of a background.</td>
+        <td>background-origin: &lt;value&gt;;</td>
+        <td>
+            <ul>
+                <li>content-box: Relative positioning to the content box.</li>
+                <li>padding-box: Relative positioning to the padding box.</li>
+                <li>border-box: Relative positioning to the border box.</li>
+                <li>Global values: inherit, initial, revert, unset</li>
+            </ul>
+        </td>
+    </tr>
+    <tr>
+        <td>background-position</td>
+        <td>Defines the positions of one or more background images relative to the background-origin position. This is the point from which any background repetition will occur.</td>
+        <td>background-position: &lt;value&gt;;</td>
+        <td>
+            <ul>
+                <li>Position keyword: left, right, left top, bottom, bottom center</li>
+                <li>X% Y%: 25% 75%, 50%, 50%</li>
+                <li>Length value: 25px 25px, 4em 2em</li>
+            </ul>
+        </td>
+    </tr>
+    <tr>
+        <td>background-repeat</td>
+        <td>Defines how the background image should be repeated if the image does not fully cover the element.</td>
+        <td>background-repeat: &lt;value&gt;;</td>
+        <td>
+            <ul>
+                <li>no-repeat - Set background image to not repeat</li>
+                <li>repeat-x - repeat along x-axis</li>
+                <li>space - Evenly distribute from the end of element</li>
+                <li>round - Scale to fit the element</li>
+            </ul>
+        </td>
+    </tr>
+    <tr>
+        <td>background-size</td>
+        <td>Defines the size of one or more background images.</td>
+        <td>background-size: &lt;value&gt;;</td>
+        <td>
+            <ul>
+                <li>contain: scales the image as much as possible while keeping the aspect ratio and avoids clipping the image.</li>
+                <li>cover: scales the image and maintains its aspect ratio, but this time the image will fill the whole area of the element and some clipping may occur.</li>
+                <li>auto: tells the browser to automatically calculate the size based on the actual size of the image and the aspect ratio.</li>
+                <li>Length value: 50%, 100px 50px</li>
+            </ul>
+        </td>
+    </tr>
+</table>
+
+<h2>Borders</h2>
+<p>A border is a line that surrounds an element, like a frame around a painting.</p>
+<p>Borders can be set with a specific width, style, and color:</p>
+<ul>
+    <li>width: The thickness of the border. A border’s thickness can be set in pixels or with one of the following keywords: thin, medium, or thick.</li>
+    <li>style: The design of the border. Web browsers can render any of 10 different styles. Some of these styles include: none, dotted, and solid.</li>
+    <li>color: The color of the border. Web browsers can render colors using a few different formats, including 140 built-in color keywords.</li>
+    </ul>
+
+<table>
+    <tr>
+        <th>Border</th>
+        <th>Description</th>
+        <th>Syntax</th>
+        <th>Values</th>
+    </tr>
+    <tr>
+        <td>border</td>
+        <td>Shorthand property that sets different properties for an elements border in a single declaration.</td>
+        <td>border: &lt;values&gt;;</td>
+        <td>See border-color, border-radius, border-style</td>
+    </tr>
+    <tr>
+        <td>border-bottom</td>
+        <td>Shorthand property that defines the width, color, and style of the bottom border of an element.</td>
+        <td>border-bottom: &lt;value&gt;;</td>
+    </tr>
+    <tr>
+        <td>border-color</td>
+        <td>Sets the color of the border. The default value is the current element color.</td>
+        <td>border-color: &lt;color&gt;;</td>
+        <td>
+            <ul>
+                <li>Color keyword: red, transparent, darkblue</li>
+                <li>Hexadecimal value: #FF0000</li>
+                <li>RGB value: rgb(255, 0, 0)</li>
+                <li>RGBA value: rgba(255, 0, 255, 0.3)</li>
+                <li>HSL value: hsl(0, 100%, 50%)</li>
+                <li>HSLA Value: hsla(180, 80%, 100%, 0.8)</li>
+            </ul>
+        </td>
+    </tr>
+    <tr>
+        <td>border-left</td>
+        <td>Shorthand property that defines the width, color, and style of the left border of an element.</td>
+        <td>border-left: &lt;value&gt;;</td>
+    </tr>
+    <tr>
+        <td>border-radius</td>
+        <td>Rounds the corners of an element.</td>
+        <td>
+            <ul>
+                <li>/* Four values */
+                    border-radius: &lt;top-left&gt; &lt;top-right&gt; &lt;bottom-right&gt; &lt;bottom-left&gt;;&lt;/bottom-left&gt;
+                    
+                <li>/* Three values */
+                    border-radius: &lt;top-left&gt; &lt;top-right + bottom-left&gt; &lt;bottom-right&gt;;</li>
+                    
+                <li>/* Two values */
+                    border-radius: &lt;top-left + bottom-right&gt; &lt;top-right + bottom-left&gt;;</li>
+                    
+                <li>/* Two values */
+                    border-radius: &lt;top-left + bottom-right&gt; &lt;top-right + bottom-left&gt;;</li>
+            </ul>
+        </td>
+    </tr>
+    <tr>
+        <td>border-right</td>
+        <td>Shorthand property that defines the width, color, and style of the right border of an element.</td>
+        <td>border-right: &lt;value&gt;;</td>
+    </tr>
+    <tr>
+        <td>border-style</td>
+        <td>Sets the style of the border. The default value is none.</td>
+        <td>border-style: &lt;line-style&gt;;</td>
+        <td>
+            <ul>
+                <li>none</li>
+                <li>hidden</li>
+                <li>dotted</li>
+                <li>dashed</li>
+                <li>solid</li>
+                <li>double</li>
+                <li>groove</li>
+                <li>ridge</li>
+                <li>inset</li>
+                <li>outset</li>
+            </ul>
+        </td>
+    </tr>
+    <tr>
+        <td>border-top</td>
+        <td>Shorthand property that defines the width, color, and style of the top border of an element.</td>
+        <td>border-top: &lt;value&gt;;</td>
+    </tr>
+    <tr>
+        <td>border-width</td>
+        <td>Shorthand property that sets the width for the overall border of an element or for each side individually.</td>
+        <td>border-width: &lt;value&gt;</td>
+    </tr>
+</table>
+
+<h2>Box Model</h2>
+    <p>The Box Model is a CSS layout mechanism that the web browser uses to render content organized by box-shaped elements. Each element is made of four specific areas:</p>
+    <ul>
+        <li>width and height: The width and height of the content area.</li>
+        <li>padding: The amount of space between the content area and the border.</li>
+        <li>border: The thickness and style of the border surrounding the content area and padding.</li>
+        <li>margin: The amount of space between the border and the outside edge of the element.</li>
+    </ul>
+
+<h2>Box Sizing</h2>
+<p>Syntax: box-sizing: value;</p>
+    <p>The value for box-sizing property can be one of the following:</p>
+    <ul>
+        <li>border-box: Any assigned padding or border is included in the calculation of the height or width of an element. If an element’s width is set to 100px and padding is set to 30px, the padding will be included in the element’s set width resulting in the total width still being 100px.</li>
+        <li>content-box: Default CSS behavior, the assigned height or width of an element plus any padding will be the total height or weight. If an element’s width is set to 100px and padding is set to 50px, the total width for the element will be 150px.</li>
+    </ul>
+
+
+<h2>Colors</h2>
+<table>
+    <tr>
+        <th>Color Property Value</th>
+        <th>Description</th>
+        <th>Syntax</th>
+        <th>Values</th>
+    </tr>
+    <tr>
+        <td>color</td>
+        <td>To set color property values for an element.</td>
+        <td>color: value;</td>
+        <td>
+            <ul>
+                <li>Name of the color (e.g., aqua, khaki, red)</li>
+                <li>RGB (red, green, and blue) colors (e.g., rgb(249, 2, 171))</li>
+                <li>Hexadecimal colors (e.g., #ff0000)</li>
+            </ul>
+        </td>
+    </tr>
+    <tr>
+        <td>hsl()</td>
+        <td>Defines the color by providing the hue value, saturation value, and the luminance value.</td>
+        <td>&lt;property&gt;: hsl(hue, saturation, luminance);</td>
+        <td>
+            <ul>
+                <li>hue: A unitless number value. The base of the color. Represents an angle in the color wheel from 0 to 360.</li>
+                <li>saturation: A percentage value. Represents the saturation of the base color. 0% represents a color with no saturation at all and it shows gray. 100% means the base color is full.</li>
+                <li>luminance: A percentage value. Represents the brightness of the base color. 0% represents a color with no luminance at all and it shows black. 100% means full lightness and it shows white. 50% means the base color is full.</li>
+            </ul>
+        </td>
+    </tr>
+    <tr>
+        <td>hsla()</td>
+        <td>Defines the color by providing the hue value, the saturation value, the luminance value, and an optional alpha value (transparency).</td>
+        <td>&lt;property&gt;: hsla(hue, saturation, luminance, alpha);</td>
+        <td>
+            <ul>
+                <li>hue, saturation, and luminance are same as hsl</li>
+                <li>alpha: A numeric value between 0 and 1. A 1 value will make the color fully opaque, while a 0 value will make the color fully transparent.</li>
+            </ul>
+        </td>
+    </tr>
+    <tr>
+        <td>opacity</td>
+        <td>To measure of how transparent an element is.</td>
+        <td>opacity: &lt;value&gt;;</td>
+        <td>
+            <ul>
+                <li>0 representing 0%, or fully invisible.</li>
+                <li>1 representing 100%, or fully visible and opaque.</li>
+            </ul>
+        </td>
+    </tr>
+    <tr>
+        <td>rgb()</td>
+        <td>Defines a color by providing values for red, green, and blue.</td>
+        <td>&lt;property&gt;: rbg(red, green, blue);</td>
+        <td>
+            <p>where red, green, blue can be one of the following:</p>
+            <ul>
+                <li>Number values: ranging between 0 and 255</li>
+                <li>Percentage values: ranging between 0% and 100%</li>
+            </ul>
+        </td>
+    </tr>
+    <tr>
+        <td>rgba()</td>
+        <td>Defines the color by providing the red value, the green value, the blue value, and an optional alpha value (transparency).</td>
+        <td>&lt;property&gt;: rbg(red, green, blue, alpha);</td>
+        <td>Same as above but where alpha is a numeric value between 0 and 1. A 1 value will make the color fully opaque, while a 0 value will make the color fully transparent.</td>
+    </tr>
+</table>
+
+<h2>Combinators</h2>
+    <p>Combinators are CSS selectors that are used to style elements that have a certain relationship with other selected elements.</p>
+    <p>Syntax: 
+        
+        selector1 selector2 ... selectorN {
+        /* declarations here */
+      }
+      
+      selector1 > selector2 ... > selectorN {
+        /* declarations here */
+      }
+      
+      selector1 + selector2 ... + selectorN {
+        /* declarations here */
+      }
+      
+      selector1 ~ selector2 ... ~ selectorN {
+        /* declarations here */
+      }</p>
+
+    <ul>
+        <li>The space selector ( ) matches all descendants of a specified element.</li>
+        <li>The child selector (>) matches all children of a specified element.</li>
+        <li>The adjacent sibling selector (+) matches all elements directly after the preceding element.</li>
+        <li>The general sibling selector (~) matches all elements that are next to the preceding element.</li>
+    </ul>
+
+<h2>Comments</h2>
+    <p>A comment is a piece of text within a style sheet that is not interpreted by the browser. It can be used to provide additional information to aid in understanding the code. By design, comments have no effect on the layout or styling of a document.</p>
+<p>Syntax: Comments, are created by an opening /* and closing */. Everything in between is commented out.</p>
+
+<h2>cursor</h2>
+<p>The cursor property sets the appearance of the mouse cursor when hovering over an element. The appearance can be set by specifying the type of cursor, or by loading a specific icon. When using an icon, fallback images can be used, ending with a mandatory keyword fallback.</p>
+<p>Syntax: cursor: keyword;</p>
+<p>Can also accept one or more URLs - cursor: url(cursor_image), url(fallback_cursor_image), keyword;</p>
+
+<h2>display</h2>
+<p>The CSS display property is a fundamental attribute that controls how an HTML element is rendered on a webpage. It determines the type of box used for an element and influences its layout and positioning within the document.</p>
+<p>Syntax: display: &lt;value&gt;;</p>
+<p>The following values can be applied:
+    <ul>
+        <li>inline</li>
+        <li>block</li>
+        <li>contents</li>
+        <li>flex</li>
+        <li>grid</li>
+        <li>inline-block</li>
+        <li>inline-flex</li>
+        <li>inline-grid</li>
+        <li>list-item</li>
+        <li>run-in</li>
+        <li>table</li>
+        <li>table-caption</li>
+        <li>table-column-group</li>
+        <li>table-header-group</li>
+        <li>table-footer-group</li>
+        <li>table-row-group</li>
+        <li>table-cell</li>
+        <li>table-column</li>
+        <li>table-row</li>
+        <li>none</li>
+        <li>initial</li>
+        <li>inherit</li>
+    </ul>
+</p>
+<table>
+    <tr>
+        <th>Display Value</th>
+        <th>Description</th>
+        <th>Syntax</th>
+    </tr>
+    <tr>
+        <td>display: block</td>
+        <td>Elements with display: block; are rendered as block-level elements. They create a line break after the element and occupy the full width of their parent container.</td>
+        <td>.block-element {
+            display: block;
+          }</td>
+    </tr>
+    <tr>
+        <td>display: inline</td>
+        <td>Elements with display: inline; are rendered as inline elements. They don’t create line breaks and occupy only the necessary width and height based on their content.</td>
+        <td>.inline-element {
+            display: inline;
+          }</td>
+    </tr>
+    <tr>
+        <td>display: inline-block</td>
+        <td>Elements with display: inline-block; are rendered as inline-level block elements. They behave like inline elements but allow you to set width, height, padding, and margins.</td>
+        <td>.inline-block-element {
+            display: inline-block;
+          }</td>
+    </tr>
+    <tr>
+        <td>display: none</td>
+        <td>Elements with display: none; are not rendered and are completely hidden from the page. They don’t take up any space in the document flow.</td>
+        <td>.hidden-element {
+            display: none;
+          }</td>
+    </tr>
+    <tr>
+        <td>display: flex</td>
+        <td>Elements with display: flex; create a flex container, allowing you to build flexible and responsive layouts. Flex items inside the container can be positioned and resized using flexbox properties.</td>
+        <td>.flex-container {
+            display: flex;
+          }</td>
+    </tr>
+    <tr>
+        <td>display: grid</td>
+        <td>Elements with display: grid; create a grid container that enables you to define rows and columns, creating a two-dimensional grid system. Child elements inside the container can be placed in specific cells and adjusted for size and alignment.</td>
+        <td>.grid-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-gap: 10px;
+          }</td>
+    </tr>
+    <tr>
+        <td>clear</td>
+        <td>Specifies whether an element coming after a floated element should be moved down or not.</td>
+        <td>clear: value;</td>
+        <td> values: 
+            <ul>
+                <li>none: The element is not moved down to clear past floating elements (the default).</li>
+                <li>left: The element is moved down to clear past left floated elements.</li>
+                <li>right: The element is moved down to clear past right floated elements.</li>
+                <li>both: The element is moved down to clear past both left and right floated elements.</li>
+            </ul>
+        </td>
+    </tr>
+    <tr>
+        <td>float</td>
+        <td>Places an element on the left or right side of its container.</td>
+        <td>float: value;</td>
+        <td>value:
+            <ul>
+                <li>right: The element floats on the right side of its container.</li>
+                <li>left: The element floats on the left side of its container.</li>
+                <li>none: This is the default value of the float property. It ensures the element will not float left or right.</li>
+            </ul>
+        </td>
+    </tr>
+</table>
+
+<h2>Filter Functions</h2>
+<p>The CSS filter property applies graphical effects like blur to an element. It is commonly used to adjust the rendering of images, backgrounds, and sometimes even borders.</p>
+<table>
+    <tr>
+        <th>Filter</th>
+        <th>Description</th>
+        <th>Syntax</th>
+        <th>Values</th>
+    </tr>
+    <tr>
+        <td>blur ()</td>
+        <td>Defines the blur radius of an element.</td>
+        <td>filter: blur(radius);</td>
+        <td>where a required radius is a length value: 0, 20px, 2.4em</td>
+    </tr>
+    <tr>
+        <td>brightness ()</td>
+        <td>Defines the brightness or darkness of an element.</td>
+        <td>filter: brightness(&lt;value&gt;);</td>
+        <td>
+            <ul>
+                <li>Number value: 0, 1.4</li>
+                <li>Percentage value: 100%, 50%</li>
+            </ul>
+        </td>
+    </tr>
+    <tr>
+        <td>contrast ()</td>
+        <td>Defines the contrast on an element.</td>
+        <td>filter: contrast(&lt;value&gt;);</td>
+        <td>
+            <ul>
+                <li>Number value: 0, 1.4</li>
+                <li>Percentage value: 100%, 50%</li>
+            </ul>
+        </td>
+    </tr>
+    <tr>
+        <td>drop-shadow ()</td>
+        <td>Creates a drop shadow effect on an element.</td>
+        <td>filter: drop-shadow(&lt;offset-h&gt; &lt;offset-v&gt; &lt;blur&gt; &lt;color&gt;);</td>
+        <td>
+            <ul>
+                <li>offset-h>(required): The horizontal offset of the shadow. Negative values will move the shadow to the left.</li>
+                <li>offset-v (required): The vertical offset of the shadow. Negative values will move the shadow up.</li>
+                <li>blur (optional): The blur of the shadow. A default value of 0 will create a hard shadow.</li>
+                <li>color (optional): The color of the shadow. If unset, the value will be the color property value.</li>
+            </ul>
+        </td>
+    </tr>
+    <tr>
+        <td>grayscale ()</td>
+        <td>Converts an element to grayscale.</td>
+        <td>filter: grayscale(&lt;value&gt;);</td>
+        <td>
+            <ul>
+                <li>Number value: 0, .4</li>
+                <li>Percentage value: 100%, 50%</li>
+            </ul>
+        </td>
+    </tr>
+    <tr>
+        <td>hue-rotate ()</td>
+        <td>Accepts an angle value and rotates the hue of an element.</td>
+        <td>filter: hue-rotate(&lt;angle&gt;);</td>
+        <td>where a required &lt;angle&gt; can be one of the following: .25turn, -45deg, 1.57rad, 31.3grad</td>
+    </tr>
+    <tr>
+        <td>invert ()</td>
+        <td>Inverts the colors of an element.</td>
+        <td>filter: invert(&lt;value&gt;);</td>
+        <td>
+            <ul>
+                <li>Number value: 0, .4</li>
+                <li>Percentage value: 100%, 50%</li>
+            </ul>
+        </td>
+    </tr>
+    <tr>
+        <td>opacity ()</td>
+        <td>Controls how much of the background is visible through the element it is applied to.</td>
+        <td>filter: opacity(&lt;value&gt;);</td>
+        <td>
+            <ul>
+                <li>Number value: 0, 1</li>
+                <li>Percentage value: 25%, 50%</li>
+            </ul>
+        </td>
+    </tr>
+    <tr>
+        <td>saturate ()</td>
+        <td>Increase or decrease the intensity of the color of the element it is applied to.</td>
+        <td>filter: saturate(&lt;value&gt;);</td>
+        <td>
+            <ul>
+                <li>Number value: 0, 1.5</li>
+                <li>Percentage value: 100%, 50%</li>
+            </ul>
+        </td>
+    </tr>
+    <tr>
+        <td>sepia ()</td>
+        <td>Changes the color of an element to sepia.</td>
+        <td>filter: sepia(&lt;value&gt;);</td>
+        <td>
+            <ul>
+                <li>Number value: 0, 1</li>
+                <li>Percentage value: 10%, 50%</li>
+            </ul>
+        </td>
+    </tr>
+</table>
+
+<h2>Flexbox</h2>
+<p>The Flexible Box Layout, commonly known as Flexbox, is a layout model that allows for responsive elements within a container that can automatically adapt to differing screen sizes.</p>
+<table>
+    <tr>
+        <th>Property</th>
+        <th>Description</th>
+        <th>Syntax</th>
+        <th>Values</th>
+    </tr>
+    <tr>
+        <td>flex</td>
+        <td>A shorthand that combines the flex-grow, flex-shrink, and flex-basis properties. This syntax allows for the concise delineation of flex item parameters with one line of code.</td>
+        <td>#item {
+            flex: &lt;flex-grow&gt; &lt;flex-shrink&gt; &lt;flex-basis&gt;;
+          }</td>
+          <td>
+            <ul>
+                <li>A keyword: auto</li>
+                <li>A length: 200px</li>
+                <li>An integer or decimal: 1 , .5</li>
+            </ul>
+          </td>
+    </tr>
+    <tr>
+        <td>flex-basis</td>
+        <td>A property that defines the default size of a flex item.</td>
+        <td>#item-a {
+            display: flex;
+            flex-basis: &lt;flex-value&gt;;
+          }</td>
+          <td>
+            <ul>
+                <li>Grid keyword ( some are not well supported ) : auto, max-content, min-content</li>
+                <li>Pixel value: 300px</li>
+                <li>Percent value: 25%</li>
+            </ul>
+          </td>
+    </tr>
+    <tr>
+        <td>flex-direction</td>
+        <td>A property that specifies the direction in which elements are distributed within a container.</td>
+        <td>#element-container {
+            display: flex;
+            flex-direction: &lt;flex-value&gt;;
+          }</td>
+          <td>
+            <ul>
+                <li>Elements arranged left to right: row</li>
+                <li>Elements arranged right to left: row-reverse</li>
+                <li>Elements arranged top to bottom: column</li>
+                <li>Elements arranged bottom to top: column-reverse</li>
+            </ul>
+          </td>
+    </tr>
+    <tr>
+        <td>flex-flow</td>
+        <td>A shorthand for specifying the flex-direction and flex-wrap properties. Defining flex-flow provides the parameters for child elements to be organized across the horizontal and vertical axes.</td>
+        <td>#element-container {
+            display: flex;
+            flex-flow: &lt;flow-value&gt; &lt;flow-value&gt;;
+          }</td>
+          <td>
+            <ul>
+                <li>flex-direction: row, row-reverse, column, column-reverse</li>
+                <li>flex-wrap: wrap, nowrap, wrap-reverse</li>
+            </ul>
+          </td>
+    </tr>
+    <tr>
+        <td>flex-grow</td>
+        <td>A property that specifies how much space an item may occupy relative to the other items in the container. An item assigned a flex-grow value of 3, will stretch to occupy 3 times more space than an item assigned a value of 1.</td>
+        <td>#element-container {
+            display: flex;
+            flex-grow: &lt;flex-value&gt;;
+          }</td>
+          <td>The &lt;flex-value&gt; should be an integer or decimal value. The default value is zero, which limits an item to the initial or default size regardless of the available space.</td>
+    </tr>
+    <tr>
+        <td>flex-shrink</td>
+        <td>Specifies how much space an item may be scaled down relative to the other items in the container (when items in the flex container are larger than the space available). An item assigned a flex-shrink value of 2, will be scaled twice as much as an item assigned a value of 1.</td>
+        <td>#element-container {
+            display: flex;
+            flex-shrink: &lt;flex-value&gt;;
+          }</td>
+          <td>The &lt;flex-value&gt; should be an integer or decimal value. The default value is one; therefore, initially all elements in a container will be scaled by the same factor in order to meet the space available.</td>
+    </tr>
+    <tr>
+        <td>flex-wrap</td>
+        <td>#element-container {
+            display: flex;
+            flex-wrap: &lt;wrap-value&gt;;
+          }</td>
+          <td>
+            <ul>
+                <li>wrap</li>
+                <li>nowrap</li>
+                <li>wrap-reverse</li>
+            </ul>
+          </td>
+    </tr>
+</table>
+
+<h2>Floats</h2>
+<p>The float property moves an element to the left or right within its containing element, outside of the default positioning.</p>
+<p>Syntax: .item_x {
+    float: none;
+  }</p>
+<p>The float property primarily uses the following three values:
+<ul>
+    <li>left - value that makes the element float on the left of its container.</li>
+    <li>right - value that makes the element float on the right of its container.</li>
+    <li>none - value that causes the element not to float.</li>
+</ul>
+</p>
+
+<h2>Grids</h2>
+<p>CSS Grid is a two-dimensional grid-based layout system that uses rows, columns, and gaps to organize content on a web page. This system helps with creating a responsive layout for web pages without having to use positioning, floats, or flexbox.</p>
+<h2>Inheritance</h2>
+<h2>Margins</h2>
+<h2>Math Functions</h2>
+<h2>Overflow</h2>
+<h2>Padding</h2>
+<h2>Position</h2>
+<h2>Pseudo-classes</h2>
+<h2>SASS</h2>
+<h2>Selectors</h2>
+<h2>Sizing</h2>
+<h2>Transform Functions</h2>
+<h2>Transition</h2>
+<h2>Typography</h2>
+<h2>Units</h2>
+<h2>Variables</h2>
+<h2>Visibility</h2>
+  </body>
+</html>
