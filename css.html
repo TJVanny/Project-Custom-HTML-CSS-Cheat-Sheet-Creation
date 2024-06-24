@@ -4,16 +4,23 @@
     <title>CSS Cheat Sheet</title>
   </head>
   <body>
-<h1>CSS</h1>
-
-<h2>Anatomy</h2>
+	  <h1>CSS</h1>
+	  <h2>Anatomy</h2>
 		<p>Ruleset:
 			selector {
 			property: value; &lt;declaration block
 			}
 </p>
-
-<h3>Selectors</h3>
+	  <h2>Box Model</h2>
+	  <p>The Box Model is a CSS layout mechanism that the web browser uses to render content organized by box-shaped elements. Each element is made of four specific areas:</p>
+	  <ul>
+		  <li>width and height: The width and height of the content area.</li>
+		  <li>padding: The amount of space between the content area and the border.</li>
+		  <li>border: The thickness and style of the border surrounding the content area and padding.</li>
+		  <li>margin: The amount of space between the border and the outside edge of the element.</li>
+	  </ul>
+	  
+	  <h3>Selectors</h3>
 		<p>All markups can be selected with the * selector</p>
 		
 		<h4>General selection by HTML element name</h4>
@@ -102,6 +109,123 @@
 	</tr>
 </table>
 
+	  <h3>Properties</h3>
+	  <p>For values see Values</p>
+	  <h4>Background</h4>
+	  <p>The CSS background properties are used to add background wallpaper visuals for HTML elements.</p>
+	  <p>Syntax:
+	  selector {
+	  background: &lt;value&gt;;
+	  }</p>
+	  <table>
+		  <tr>
+			  <th>Property</th>
+			  <th>Description</th>
+		  </tr>
+		  <tr>
+			  <td>background:</td>
+			  <td>Shorthand way of expressing the various background properties of one or more element backgrounds in any order using a single declaration.</td>
+		  <tr>
+			  <td>background-attachment:</td>
+			  <td>Determines if the background image is fixed in relationship to the viewport or whether it will scroll along with the rest of the page.</td>
+		  </tr>
+		  <tr>
+			  <td>background-blend-mode:</td>
+			  <td>Returns a new blended color based on the background color and the background images.</td>
+		  </tr>
+		  <tr>
+			  <td>background-clip:</td>
+			  <td>Defines the boundary within the element box at which the background is no longer drawn.</td>
+		  </tr>
+		  <tr>
+			  <td>background-color:</td>
+			  <td>Defines a color for the background of an element.</td>
+		  </tr>
+		  <tr>
+			  <td>background-image:</td>
+			  <td>Places one or more images in the background of the element.</td>
+		  </tr>
+		  <tr>
+			  <td>background-origin:</td>
+			  <td>Specifies the background positioning area of a background.</td>
+		  </tr>
+		  <tr>
+			  <td>background-position:</td>
+			  <td>Defines the positions of one or more background images relative to the background-origin position. This is the point from which any background repetition will occur.</td>
+		  </tr>
+		  <tr>
+			  <td>background-repeat:</td>
+			  <td>Defines how the background image should be repeated if the image does not fully cover the element.</td>
+		  </tr>
+		  <tr>
+			  <td>background-size:</td>
+			  <td>Defines the size of one or more background images.</td>
+		  </tr>
+	  </table>
 
+	 <h4>Borders</h4>
+	  <p>A border is a line that surrounds an element, like a frame around a painting.</p>
+	  <p>Syntax:
+	  selector {
+	  border: &lt;value&gt;;
+	  }
+	  </p>
+	  <table>
+		  <tr>
+			  <th>Property</th>
+			  <th>Description</th>
+		  </tr>
+		  <tr>
+			  <td>border:</td>
+			  <td>Shorthand property that sets different properties for an element’s border in a single declaration.</td>
+		  </tr>
+		  <tr>
+			  <td>
+				  <ul>
+					  <li>border-bottom:</li>
+					  <li>border-top:</li>
+					  <li>border-right:</li>
+					  <li>border-left:</li>
+				  </ul>
+			  </td>
+			  <td>Shorthand property that defines the width, color, and style of the specific piece.</td>
+		  </tr>
+		  <tr>
+			  <td>border-color:</td>
+			  <td>Defines a color for the background of an element.</td>
+		  </tr>
+		  <tr>
+			  <td>border-radius:</td>
+			  <li>Rounds the corners of an element.</li>
+		  </tr>
+		  <tr>
+			  <td>border-style:</td>
+			  <td>Sets the style of the border. The default value is none.</td>
+		  </tr>
+		  <tr>
+			  <td>border-width:</td>
+			  <td>Shorthand property that sets the width for the overall border of an element or for each side individually.</td>
+		  </tr>
+	  </table>
+
+	  <h4>Box Sizing</h4>
+	  <p>The box-sizing property allows us to include the padding and border in the calculation of an element’s height and width.</p>
+	  <p>Syntax:
+	  selector{
+	  box-sizing: value;
+	  }
+	  </p>
+	  <p>The value for box-sizing property can be one of the following:</p>
+	  <ul>
+		  <li>border-box: Any assigned padding or border is included in the calculation of the height or width of an element. If an element’s width is set to 100px and padding is set to 30px, the padding will be included in the element’s set width resulting in the total width still being 100px.</li>
+		  <li>content-box: Default CSS behavior, the assigned height or width of an element plus any padding will be the total height or weight. If an element’s width is set to 100px and padding is set to 50px, the total width for the element will be 150px.</li>
+	  </ul>
+
+	  <h4>Colors</h4>
+	  <p>The CSS color property sets the text color</p>
+	  <p>Syntax:
+	  selector {
+	  color: value;
+	  }</p>
   </body>
 </html>
