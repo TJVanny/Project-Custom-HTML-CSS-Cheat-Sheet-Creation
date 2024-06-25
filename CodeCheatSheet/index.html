@@ -1,0 +1,599 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>HTML Cheat Sheet</title>
+    <link href="C:\CodeCheatSheet\styles.css" type="text/css" rel="stylesheet">
+  </head>
+  <body>
+<h1>HTML<a href="./css.html">CSS</a></h1>
+<h2>Table of Contents</h2>
+<table>
+    <tr>
+        <td><a href="#attributes">Attributes</a></td>
+        <td><a href="#comments">Comments</a></td>
+        <td><a href="#elements">Elements</a></td>
+    </tr>
+    <tr>
+        <td><a href="#Entities">Entities</a></td>
+        <td><a href="#favicon">Favicon</a></td>
+        <td><a href="#filepaths">File Paths</a></td>
+    </tr>
+    <tr>
+        <td><a href="#forms">Forms</a></td>
+        <td><a href="#Headings">Headings</a></td>
+        <td><a href="#iframes">iFrames</a></td>
+    </tr>
+    <tr>
+        <td><a href="#images">Images</a></td>
+        <td><a href="#links">Links</a></td>
+        <td><a href="#semantichtml">Semantic HTML</a></td>
+    </tr>
+    <tr>
+        <td><a href="#tables">Tables</a></td>
+        <td><a href="#tags">Tags</a></td>
+    </tr>
+</table>
+
+    <p>HTML, short for HyperText Markup Language, is the foundation of all web pages. It was created by Tim Berners-Lee in 1993 to define the structure of a web page. Without it, you wouldn’t be able to organize text or add images or videos to your pages. HTML is the beginning of everything you need to know to make your first website.</p>
+<h3>HTML Structure</h3>
+    <p>
+    &lt;!DOCTYPE html&gt;
+    &lt;html&gt;
+      &lt;head&gt;
+        &lt;title&gt;Title of the document&lt;/title&gt;
+      &lt;/head&gt;
+      &lt;body&gt;
+        &lt;div&gt;
+          &lt;h1&gt;Heading 1&lt;/h1&gt;
+        &lt;/divGt  
+      &lt;/body&gt;
+    &lt;/html&gt;
+    The &lt;!DOCTYPE&gt; declaration tells the browser that a given file is a markup .html file and that a set of web standards must be applied to it. It is the first line of code that goes at the top of every HTML or XHTML file.</p>
+
+    <h2 id="attribute">Attributes</h2>
+<p>Attributes are data that can be added to the opening tag of an HTML element. These attributes modify the default behavior of the element or provide additional information about it. Attributes consist of a name and are usually set equal to a value. Values are enclosed in double or single quotation marks.</p>
+<p>Syntax: &lt;tagname attribute="value"&gt;&lt;/tagname&gt;</p>
+<p>Example: &lt;img src="source_of_image.png" width="500" height="600" /&gt;</p>
+
+<table>
+    <tr>
+        <th>Attribute</th>
+        <th>Use</th>
+        <th>Syntax</th>
+        <th>Values</th>
+    </tr>
+    <tr>
+        <td>class</td>
+        <td>Select one or more elements for CSS Styling or JavaScript purposes</td>
+        <td>&lt;element class="name"&gt;</td>
+        <td>You can name this whatever you like</td>
+    </tr>
+    <tr>
+        <td>dir</td>
+        <td>sets the direction of an HTML element‘s text</td>
+        <td>&lt;element  dir="direction"&gt;</td>
+        <td>ltr - Default left-to-right text direction, i.e., English.</td>
+        <td>rtl - Right-to-left text direction, i.e., Arabic.</td>
+        <td>auto - The browser figures out the text direction based on the content (only recommended if the text direction is unknown).</td>
+    </tr>
+    <tr>
+        <td>id</td>
+        <td>Used to specify a unique id for an HTML element, which cannot be shared across multiple elements within the same HTML document.</td>
+        <td>&lt;div id="myElement">My Element&gt;</td>
+        <td>You can name this whatever you like but it is case sensitive and must contain one character. It cannot start with a number or contain whitespaces</td>
+    </tr>
+    <tr>
+        <td>src</td>
+        <td>Specifies the location of a digital source.</td>
+        <td>&lt;element  src="url"&gt;</td>
+        <td>url or file path</td>
+    </tr>
+    <tr>
+        <td>style</td>
+        <td>Specifies how an element will be rendered in a web browser.</td>
+        <td>&lt;element_tag style="property1:value; property2:value;"&gt;</td>
+        <td>specify property style</td>
+    </tr>
+    <tr>
+        <td>title</td>
+        <td>Contains and can display the specified information about the element it belongs to.</td>
+        <td>&lt;opening-tag title="text"> content &lt;/closing-tag&gt;</td>
+        <td>describe the title</td>
+    </tr>
+</table>
+
+<h2 id="comments">Comments</h2>
+<p>Used for documentation and excluding markup from being rendered.</p>
+<p>Syntax: &lt;!-- Comments go between these tags. --&gt;</p>
+
+<h2 id="elements">Elements</h2>
+<p>Elements are discrete components within an HTML document that generally consist of at least one tag but can have two tags with optional content. The tag name determines how the element will be rendered in the HTML document. Elements can also have any number of attributes.</p>
+<p>Syntax: &lt;element&gt; content &lt;/closing element&gt;</p>
+<table>
+    <tr>
+    <th>Element</th>
+    <th>Use</th>
+    <th>Syntax</th>
+    <th>Values</th>
+    </tr>
+    <tr>
+        <td>&lt;a&gt;</td>
+        <td>Creates a link to another page or to a location in the current page.</td>
+        <td>&lt;a value="url">Displayed Text&lt;/a&gt;</td>
+        <td>href - represents the URL that the link points to</td>
+        <td>target - represents where to open and display the URL stored in the href </td>
+        <td>rel - describes the link type of for the element (e.g., using "noopener" and "noreferrer" when adding browser safeguards to links)</td>
+    </tr>
+    <tr>
+        <td>&lt;abbr&gt;</td>
+        <td>Indicates an acronym or abbreviation of a longer word or phrase.</td>
+        <td>&lt;abbr title="">
+            &lt;!-- The acronym or abbreviation here --&gt;
+          &lt;/abbr&gt;</td>
+    <tr>
+        <td>&lt;acronym&gt;</td>
+        <td>Creates text that will be displayed when hovered over.</td>
+        <td>&lt;p&gt;
+            A great place to learn to code is &lt;acronym title="Codecademy"&gt;CC&lt;/acronym&gt;
+          &lt;/p&gt;</td>
+    </tr>
+    <tr>
+        <td>&lt;audio&gt;</td>
+        <td>Represents an interface for adding audio content to the page.</td>
+        <td>&lt;audio controls&gt;
+            &lt;!-- Source tags with different audio formats go here --&gt;
+          &lt;/audio&gt;</td>
+    </tr>
+    <tr>
+        <td>&lt;b&gt;</td>
+        <td>Used to draw attention to a section of text, usually rendered in boldface.</td>
+        <td>&lt;b&gt;
+            &lt;!-- Text to draw attention to here --&gt;
+          &lt;/b&gt;</td>
+    </tr>
+    <tr>
+        <td>&lt;basefont&gt;</td>
+        <td>Used to be used to set the font of text. This is now deprecated.</td>
+        <td>&lt;basefont&gt; must be a child of the element. Any combination of the following three attributes could be used in the &lt;font&gt; element, with at least one being required:</td>
+        <td>color - sets the color for the font</td>
+        <td>face - sets the font for the text</td>
+        <td>size - sets the size of the font/text</td>
+    </tr>
+    <tr>
+        <td>&lt;blockquote&gt;</td>
+        <td>Represents a section of a document which contains a longer quotation, usually spanning multiple lines.</td>
+        <td>&lt;blockquote cite="citation url"&gt;
+            &lt;!-- The quotation goes inside the tag --&gt;
+          &lt;/blockquote&gt;</td>
+    </tr>
+    <tr>
+        <td>&lt;br&gt;</td>
+        <td>Represents a break in text. It is used when text needs to span multiple lines rather than being in-line, such as in an address.</td>
+        <td>Text that will appear on one line.&lt;br /&gt;Text that will appear on the next line.</td>
+    </tr>
+    <tr>
+        <td>&lt;button&gt;</td>
+        <td>Represents a button meant to be clicked by the user.</td>
+        <td>&lt;button&gt;
+            &lt;!-- Button content lives here --&gt;
+          &lt;/button&gt;</td>
+    </tr>
+    <tr>
+        <td>&lt;canvas&gt;</td>
+        <td>Creates graphics and animations in the page for JavaScript and WebGL to interact with</td>
+        <td>&lt;canvas&gt;
+            Alternate text goes here, should the browser not support the canvas tag.
+          &lt;/canvas&gt;</td>
+    </tr>
+    <tr>
+        <td>&lt;cite&gt;</td>
+        <td>Represents a citation to a referenced work such as a book, a song, or a painting.</td>
+        <td>&lt;cite&gt;
+            &lt;!-- Title of work goes here --&gt;
+          &lt;/cite&gt;</td>
+    </tr>
+    <tr>
+        <td>&lt;code&gt;</td>
+        <td>Represents source code contained in the text.</td>
+        <td>&lt;code&gt;&lt;!-- Code snippet lives here --&gt;&lt;/code&gt;</td>
+    </tr>
+    <tr>
+        <td>&lt;col&gt;</td>
+        <td>Creates properties for table columns, including styling and attributes, often used within a &lt;colgroup&gt; to apply them to multiple columns simultaneously.</td>
+        <td>&lt;col attributes&gt;</td>
+    </tr>
+    <tr>
+        <td>&lt;datalist&gt;</td>
+        <td>Displays pre-defined values to a user while typing into an input box.</td>
+        <td>&lt;input list="input_list" &gt;
+
+            &lt;datalist id="input_list"&gt;
+              &lt;option value="option1" &gt;
+              &lt;option value="option2" &gt;
+              &lt;option value="option3" &gt;
+            &lt;/datalist&gt;</td>
+    </tr>
+    <tr>
+        <td>&lt;dd&gt;</td>
+        <td>Describes details found inside a &lt;dl&gt; element. It usually comes with at least one corresponding &lt;dt&gt; term tag.</td>
+        <td>&lt;dl&gt;
+            &lt;!-- &lt;dt&gt; term(s) here --&lt;
+            &lt;dd&gt;Details&lt;/dd&gt;
+          &lt;/dl&gt;</td>
+    </tr>
+    <tr>
+        <td>&lt;del&gt;</td>
+        <td>Shows text that is to be removed from a document, usually rendered in strike-through text.</td>
+        <td>&lt;del&gt;
+            &lt;!-- deleted text here --&gt;
+          &lt;/del&gt;</td>
+    </tr>
+    <tr>
+        <td>&lt;div&gt;</td>
+        <td>Represents a generic division of content. It has no semantic meaning, but will separate its contents from the rest of the document.</td>
+        <td>&lt;div&gt;
+            &lt;!-- Content lives here --&gt;
+          &lt;/div&gt;</td>
+    </tr>
+    <tr>
+        <td>&lt;dl&gt;</td>
+        <td>Displays terms and details, commonly for metadata purposes.</td>
+        <td>&lt;dl&gt;
+            &lt;!-- &lt;dt&gt; terms here --&gt;
+            &lt;!-- &lt;dd&gt; details here --&gt;
+          &lt;/dl&gt;</td>
+    </tr>
+    <tr>
+        <td>&lt;dt&gt;</td>
+        <td>Describes a term found inside a &lt;dl&gt; tag. It usually comes with at least one corresponding &lt;dd&gt; details tag.</td>
+        <td>&lt;dl&gt;
+            &lt;dt&gt;Term&lt;/dt&gt;
+            &lt;!-- &lt;dd&gt; detail(s) here --&gt;
+          &lt;/dl&gt;</td>
+    </tr>
+    <tr>
+        <td>&lt;em&gt;</td>
+        <td>Represents text which is emphasized. Browsers will show the enclosed text in italics, by default."</td>
+        <td>&lt;em&gt;&lt;!-- Emphasized text goes here --&gt;&lt;/em&gt;</td>
+    </tr>
+    <tr>
+        <td>&lt;embed&gt;</td>
+        <td>Inserts external content such as a video, image, page, and more.</td>
+        <td>&lt;embed type="" src="" width="" height="" /&gt;</td>
+    </tr>
+    <tr>
+        <td>&lt;form&gt;</td>
+        <td>Represents an interface to collect and submit user supplied information. This can include open ended text inputs, radio buttons, calendar information, and more.</td>
+        <td>&lt;form&gt;
+            &lt;!-- Form content lives here --&gt;
+          &lt;/form&gt;</td>
+    </tr>
+    <tr>
+        <td>&lt;h1&gt;-&lt;h6&gt;</td>
+        <td>Represents a text heading for a section of content, with &lt;h1&gt; being the highest level of heading and &lt;h6&gt; being the lowest.</td>
+        <td>&lt;h1&gt;
+            &lt;!-- Text for heading goes here --&gt;
+          &lt;/h1&gt;</td>
+    </tr>
+    <tr>
+        <td>&lt;head&gt;</td>
+        <td>Represents a collection of metadata related to the current document. It is an immediate child of the `&lt;html&gt;` element and may include other tags such as &lt;title&gt;, &lt;link&gt;, &lt;style&gt;, and &lt;script&gt;.</td>
+        <td>&lt;head&gt;
+            &lt;!-- Document-level metadata tags go here --&gt;
+          &lt;/head&gt;</td>
+    </tr>
+    <tr>
+        <td>&lt;hr&gt;</td>
+        <td>Represents a semantic, horizontal line break between text elements.</td>
+        <td>&lt;hr /&gt;</td>
+    </tr>
+    <tr>
+        <td>&lt;html&gt;</td>
+        <td>Represents the entire HTML document.</td>
+        <td>&lt;html&gt;
+            &lt;!-- Entire document goes here --&gt;
+          &lt;/html&gt;</td>
+    </tr>
+    <tr>
+        <td>&lt;i&gt;</td>
+        <td>Used to set off HTML text for some reason, as idiomatic, technical, taxonomical and so on. Typically rendered as italic.</td>
+        <td>&lt;i&gt;
+            &lt;!-- Text which should be set off goes here --&gt;
+          &lt;/i&gt;</td>
+    </tr>
+    <tr>
+        <td>&lt;iframe&gt;</td>
+        <td>Represents a container used to embed a second web page inside the current one. It can be used for content from the same domain as the parent, or even from a second domain.</td>
+        <td>&lt;iframe&gt;&lt;/iframe&gt;</td>
+    </tr>
+    <tr>
+        <td>&lt;img&gt;</td>
+        <td>Displays an image on the web page.</td>
+        <td>&lt;img src="image URL" alt="text used for accessibility" /&gt;</td>
+    </tr>
+    <tr>
+        <td>&lt;input&gt;</td>
+        <td>Creates an interactive element, usually used within a form to allow user input. It can be used to make text boxes, color pickers, date pickers, and other UI elements.</td>
+        <td>&lt;input /&gt;</td>
+    </tr>
+    <tr>
+        <td>&lt;kbd&gt;</td>
+        <td>Emphasizes characters to look like keys on a keyboard.</td>
+        <td>&lt;kbd&gt;&lt;!-- Text goes here --&gt;&lt;/kbd&gt;</td>
+    </tr>
+    <tr>
+        <td>&lt;label&gt;</td>
+        <td>Identifies captions for other elements in an HTML document.</td>
+        <td>&lt;label for="" form=""&gt;
+            &lt;!-- Labeled content goes here --&gt;
+          &lt;/label&gt;</td>
+    </tr>
+    <tr>
+        <td>&lt;li&gt;</td>
+        <td>Represents a single item in a list of items. It and the other list items must be wrapped in an &lt;ol&gt;, &lt;ul&gt;, or &lt;menu&gt; tag</td>
+        <td>&lt;li&gt;Text for list item&lt;/li&gt;</td>
+    </tr>
+    <tr>
+        <td>&lt;link&gt;</td>
+        <td>Connects the current page with an external file.</td>
+        <td>&lt;head&gt;
+            &lt;title&gt;Links in HTML&lt;/title&gt;
+            &lt;link rel="stylesheet" href="some/outside/source.css" /&gt;
+          &lt;/head&gt;</td>
+    </tr>
+    <tr>
+        <td>&lt;menu&gt;</td>
+        <td>Represents an unordered list of items with more semantic meaning than a regular ul element.</td>
+        <td>&lt;menu&gt;
+            &lt;li&gt;&lt;!-- Content here --&gt;&lt;/li&gt;
+          &lt;/menu&gt;</td>
+    </tr>
+    <tr>
+        <td>&lt;meta&gt;</td>
+        <td>Represents an interface to provide metadata pertaining to the document. Metadata is data that is used to describe the document that contains it.</td>
+        <td>&lt;meta /&gt;</td>
+    </tr>
+    <tr>
+        <td>&lt;noscript&gt;</td>
+        <td>Displays content within if JavaScript is disabled in the browser or not supported.</td>
+        <td>&lt;noscript&gt;
+            &lt;!-- What should display if JavaScript is not enabled or supported. --&gt;
+          &lt;/noscript&gt;</td>
+    </tr>
+    <tr>
+        <td>&lt;object&gt;</td>
+        <td>Represents an external resource such as an image, a nested browsing context, or content to be handled by a browser plugin.</td>
+        <td>&lt;object type="MIME type" data="URL of resource"&gt;&lt;/object&gt;</td>
+    </tr>
+    <tr>
+        <td>&lt;ol&gt;</td>
+        <td>Represents an ordered list of items.</td>
+        <td>&lt;ol&gt;
+            &lt;li&gt;&lt;!-- Content here --&gt;&lt;/li&gt;
+          &lt;/ol&gt;</td>
+    </tr>
+    <tr>
+        <td>&lt;option&gt;</td>
+        <td>Represents one option in a dropdown created by the select tag.</td>
+        <td>&lt;select name="dropdown name"&gt;
+            &lt;option value="value of option 1">Text for option 1&lt;/option&gt;
+            &lt;option value="value of option 2">Text for option 2&lt;/option&gt;
+            &lt;option value="value of option 3">Text for option 3&lt;/option&gt;
+          &lt;/select&gt;</td>
+    </tr>
+    <tr>
+        <td>&lt;output&gt;</td>
+        <td>Displays the result of a calculation or user action.</td>
+        <td>The result of 5 + 5 is &lt;output name="operation-result">10&lt;/output&gt;</td>
+    </tr>
+    <tr>
+        <td>&lt;p&gt;</td>
+        <td>Contains and displays a block of text that defines a paragraph.</td>
+        <td>&lt;p>&gt;This is some text in a paragraph.&lt;/p&gt;</td>
+    </tr>
+    <tr>
+        <td>&lt;param&gt;</td>
+        <td>Used to pass parameters to a resource defined in an object tag.</td>
+        <td>&lt;param name="parameter name" value="parameter value" /&gt;</td>
+    </tr>
+    <tr>
+        <td>&lt;picture&gt;</td>
+        <td>Represents multiple possible image sources to be applied to different devices and screen-sizes.</td>
+        <td>&lt;picture&gt;
+            Zero or more &lt;source&gt; tags go here,
+            followed by at least one &lt;img&gt; tag here.
+          &lt;/picture&gt;</td>
+    </tr>
+    <tr>
+        <td>&lt;q&gt;</td>
+        <td>Used to represent a brief inline quotation.</td>
+        <td>&lt;q cite=""&gt;&lt;!-- Brief quotation goes inside the tag --&gt;&lt;/q&gt;
+        </td>
+    </tr>
+    <tr>
+        <td>&lt;s&gt;</td>
+        <td>Represents strike-through text that is no longer need, accurate, or correct.</td>
+        <td>&lt;s&gt;
+            &lt;!-- Incorrect, inaccurate, and unnecessary text here --&gt;
+          &lt;/s&gt;</td>
+    </tr>
+    <tr>
+        <td>&lt;script&gt;</td>
+        <td>Used to insert runnable code into a document, usually JavaScript. Can be used both to include a script within the HTML document, or to load an external script from another source.</td>
+        <td>&lt;!-- In-document script --&gt;
+            &lt;script&gt;
+              // JavaScript code goes here
+            &lt;/script&gt;
+            
+            &lt;!-- External script --&gt;
+            &lt;script src="filename.js"&gt;&lt;/script&gt;</td>
+    </tr>
+    <tr>
+        <td>&lt;select&gt;</td>
+        <td>Creates a drop-down list for the user to select from a number of option elements.</td>
+        <td>&lt;select name="dropdown name"&gt;
+            &lt;option value="value of option 1">Text for option 1&lt;/option&gt;
+            &lt;option value="value of option 2">Text for option 2&lt;/option&gt;
+            &lt;option value="value of option 3">Text for option 3&lt;/option&gt;
+          &lt;/select^gt</td>
+    </tr>
+    <tr>
+        <td>&lt;source&gt;</td>
+        <td>Represents an interface for adding source content to the page.</td>
+        <td>&lt;audio&gt;
+            &lt;source src="link-or-path.here" /&gt;
+            &lt;!-- Fallback content here. --&gt;
+          &lt;/audio&gt;</td>
+    </tr>
+    <tr>
+        <td>&lt;span&gt;</td>
+        <td>Used for grouping related text or elements for styling and scripting.</td>
+        <td>&lt;span attributes=""&gt;&lt;!-- Place content here. --&gt;&lt;/span&gt;</td>
+    </tr>
+    <tr>
+        <td>&lt;strong&gt;</td>
+        <td>Used to identify text that is very important, or urgent.</td>
+        <td>&lt;strong&gt;&lt;!-- text which should be emphasized goes here --&gt;&lt;/strong&gt;
+        </td>
+    </tr>
+    <tr>
+        <td>&lt;style&gt;</td>
+        <td>Applies CSS styles to an HTML document.</td>
+        <td>&lt;head&gt;
+            &lt;style&gt;
+              /* CSS rules go here */
+            &lt;/style&gt;
+          &lt;/head&gt;</td>
+    </tr>
+    <tr>
+        <td>&lt;table&gt;</td>
+        <td>Represents an interface for adding tabular data to the page. Tables are two dimensional, made up of rows and columns, and can contain many types of content.</td>
+        <td>&lt;table&gt;
+            &lt;!-- Table elements and content go inside of here --&gt;
+          &lt;/table&gt;</td>
+    </tr>
+    <tr>
+        <td>&lt;textarea&gt;</td>
+        <td>Displays multi-line plain-text input.</td>
+        <td>&lt;textarea&gt;
+            &lt;!-- Content here --&gt;
+          &lt;/textarea&gt;</td>
+    </tr>
+    <tr>
+        <td>&lt;track&gt;</td>
+        <td>An HTML element that specifies subtitles, closed captioning, and other text files for media elements</td>
+        <td>&lt;element
+            source= src="url"&gt;
+            &lt;track src="text-based file description" kind="type of text"
+             other attribute="description"&gt;
+             &lt;/element&gt;</td>
+    </tr>
+    <tr>
+        <td>&lt;u&gt;</td>
+        <td>Displays HTML text with a non-textual annotation. The default rendering of this is a solid underline.</td>
+        <td>&lt;u&gt;
+            &lt;!-- Text that should be annotated goes here --&gt;
+          &lt;/u&gt;</td>
+    </tr>
+    <tr>
+        <td>&lt;ul&gt;</td>
+        <td>Represents an unordered list of items.</td>
+        <td>&lt;ul&gt;
+            &lt;li&gt;&lt;!-- Content here --&gt;&lt;/li&gt;
+          &lt;/ul&gt;</td>
+    </tr>
+    <tr>
+        <td>&lt;video&gt;</td>
+        <td></td>
+        <td>&lt;!-- Surrounding source tag --&gt;
+            &lt;video&gt;
+              &lt;source src="filename.mp4" type="video/mp4" /&gt;
+              &lt;h3&gt;Fallback text if video will not play&lt;/h3&gt;
+            &lt;/video&gt;
+            
+            &lt;!-- With src attribute --&gt;
+            &lt;video src="filename.mp4"&gt;
+              &lt;h3&gt;Fallback text if video will not play&lt;/h3&gt;
+            &lt;/video&gt;</td>
+    </tr>
+</table>
+
+<h2 id="Entities">Entities</h2>
+<p>Entities are character sequences placed in the text of an HTML document to print out reserved characters which may otherwise be interpreted as HTML code by a browser, or other special characters that would be difficult to generate with a typical keyboard. In fact, using reference numbers, an entity can represent any Unicode character. When parsing the HTML, a browser replaces the entity’s character sequence with the character it represents.</p>
+<p>Syntax:
+    <ul>
+        <li>entity by name - &name;</li>
+        <li>decimal Unicode number - &#number;</li>
+        <li>hexadecimal Unicode number - &#xnumber;</li>
+    </ul>
+    </p>
+
+
+<h2 id="favicon">Favicon</h2>
+<p>A favicon (short for “favorite icon”) is an icon that is displayed in the browser’s address bar and tab title for a website. It is used to help users quickly identify the website and distinguish it from other tabs or bookmarks.</p>
+<p>Syntax: &lt;head&gt;
+    &lt;link rel="shortcut icon" type="image/x-icon" href="/path/to/favicon.ico" /&gt;
+  &lt;/head&gt;</p>
+
+<h2 id="filepaths">File Paths</h2>
+<p>A file path describes the location of a file in a website’s folder structure. They are used to link to external files.</p>
+
+<h2 id="forms">Forms</h2>
+<p>In HTML, forms are used for gathering and sending user input to an external source (like a server) for processing. This is done with the &lt;form&gt; element, which contains various labels and inputs.</p>
+<p>Syntax:&lt;form&gt;
+    &lt;!-- Form elements --&gt;
+  &lt;/form&gt; </p>
+
+<h2 id="Headings">Headings</h2>
+<p>Among the HTML elements are the 6 heading elements. They are labeled 1-6, with 1 being the largest sized heading and 6 being the smallest. These are great for labeling different sections in a website:</p>
+<h1>Heading 1</h1>
+<h2>Heading 2</h2>
+<h3>Heading 3</h3>
+<h4>Heading 4</h4>
+<h5>Heading 5</h5>
+<h6>Heading 6</h6>
+
+<h2 id="iframes">iFrames</h2>
+<p>An IFrame (Inline Frame) is an HTML document embedded inside another HTML document on a website. The &lt;iframe&gt; element provides a smaller version of a browser window that contains various media, such as an advertisement, a YouTube video, etc. Some sites such as Youtube will provide IFrame markup for the user to embed instead of making one on their own.</p>
+
+<h2 id="images">Images</h2>
+<p>While many websites are primarily text, embedding images using HTML within a site allows for more lively pages that can be more attractive and informative to visitors. However, when serving images, there are concerns about the impact on page loading speeds as well as accessibility, so knowledge of how images can be best served to users is critical for good development.</p>
+<p>Syntax: &lt;img src="logo.png" alt="Codecademy logo" /&gt;</p>
+
+<h2 id="links">Links</h2>
+<p>Links are used in HTML to add features to a web page including styling, functionality, hyperlinks, and navigation.</p>
+<p>Syntax: The &lt;a&gt; anchor tag is used to create hyperlinks in an HTML document. The hyperlinks can point to other webpages, files on the same server, a location on the same page, or any other URL using the hyperlink reference href attribute.</p>
+
+<h2 id="semantichtml">Semantic HTML</h2>
+<p>Semantic HTML introduces meaning to the code we write. Developing with semantic HTML means using HTML tags that are representative of the content so that browsers can appropriately parse the content of the site.</p>
+<p>Syntaxt: &lt;!-- Non Semantic HTML --&gt;
+    &lt;div id="footer"&gt;
+      &lt;p&gt;This is a footer&lt;/p&gt;
+    &lt;/div&gt;
+
+    &lt;!-- Semantic HTML --&gt;
+&lt;footer&gt;
+    &lt;p&gt;This is a footer.&lt;/p&gt;
+  &lt;/footer&gt;</p>
+
+<h2 id="tables">Tables</h2>
+<p>In HTML, a table is an element that allows data representation in two dimensions. These dimensions are columns and rows.</p>
+<p>Syntax: 
+    &lt;table&gt;
+        &lt;tr&gt;
+          &lt;th&gt;Heading 1&lt;/th&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+          &lt;td&gt;Cell 1&lt;/td&gt;
+&lt;/tr&gt;
+      &lt;/table^gt
+</p>
+
+<h2 id="tags">Tags</h2>
+<p>In HTML, tags are commonly defined as a set of characters constituting a formatted command for a web page. They are used for making elements for the web page’s markup. During the early days of the World Wide Web, tags were responsible for a majority of the web’s code.</p>
+<p>Syntax: 
+    &lt;element-name> content &lt;/element-name&gt;
+&lt;self-closing-element-tag /&gt;
+</p>
+  </body>
+</html>
