@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>HTML Cheat Sheet</title>
+    <link href="./styles.css" type="text/css" rel="stylesheet">
+  </head>
+  <body>
+<h1>HTML<a href="./css.html">CSS</a></h1>
+<h2>Table of Contents</h2>
+
+<table class="toc">
+    <tr>
+        <td><a href="#attributes">Attributes</a></td>
+        <td><a href="#comments">Comments</a></td>
+        <td><a href="#elements">Elements</a></td>
+    </tr>
+    <tr>
+        <td><a href="#Entities">Entities</a></td>
+        <td><a href="#favicon">Favicon</a></td>
+        <td><a href="#filepaths">File Paths</a></td>
+    </tr>
+    <tr>
+        <td><a href="#forms">Forms</a></td>
+        <td><a href="#Headings">Headings</a></td>
+        <td><a href="#iframes">iFrames</a></td>
+    </tr>
+    <tr>
+        <td><a href="#images">Images</a></td>
+        <td><a href="#links">Links</a></td>
+        <td><a href="#semantichtml">Semantic HTML</a></td>
+    </tr>
+    <tr>
+        <td><a href="#tables">Tables</a></td>
+        <td><a href="#tags">Tags</a></td>
+    </tr>
+</table>
+</div>
+
+    <p>HTML, short for HyperText Markup Language, is the foundation of all web pages. <br/>It was created by Tim Berners-Lee in 1993 to define the structure of a web page. Without it, you wouldn’t be able to organize text or add images or videos to your pages. <br/>HTML is the beginning of everything you need to know to make your first website.</p>
+<h3>HTML Structure</h3>
+<div class="htmlparent">
+    <p class="htmlchild">
+    &lt;!DOCTYPE html&gt;<br/>
+    &lt;html&gt;<br/>
+      &nbsp;&nbsp;&lt;head&gt;<br/>
+        &nbsp;&nbsp;&nbsp;&nbsp;&lt;title&gt;Title of the document&lt;/title&gt;<br/>
+      &nbsp;&nbsp;&lt;/head&gt;<br/>
+      &nbsp;&nbsp;&lt;body&gt;<br/>
+        &nbsp;&nbsp;&nbsp;&nbsp;&lt;div&gt;<br/>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;h1&gt;Heading 1&lt;/h1&gt;<br/>
+        &nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;<br/>
+      &nbsp;&nbsp;&lt;/body&gt;<br/>
+    &lt;/html&gt;<br/>
+    </p></div>
+    <p>The &lt;!DOCTYPE&gt; declaration tells the browser that a given file is a markup .html file and that a set of web standards must be applied to it. It is the first line of code that goes at the top of every HTML or XHTML file.</p>
+
+    <h2 id="attribute">Attributes</h2>
+<p><span class="attcolor">Attributes</span> are data that can be added to the opening tag of an HTML element. <br/>These <span class="attcolor">attributes</span> modify the default behavior of the element or provide additional information about it. <br/><span class="attcolor">Attributes</span> consist of a name and are usually set equal to a value. <br/>Values are enclosed in double or single quotation marks.</p>
+<p>Syntax:<br/>
+  &lt;element <span class="attcolor">attributes</span> = "value"&gt; &lt;/element&gt;</p>
+<p>Example: &lt;img src="source_of_image.png" width="500" height="600" /&gt;</p>
+
+<table class="atttable">
+    <tr>
+        <th><span class="attcolor">Attributes</span></th>
+        <th>Use</th>
+        <th>Values</th>
+    </tr>
+    <tr>
+        <td><span class="attcolor">class</span></td>
+        <td>Select one or more elements for CSS Styling or JavaScript purposes</td>
+        <td>You can name this whatever you like</td>
+    </tr>
+    <tr>
+        <td><span class="attcolor">dir</span></td>
+        <td>sets the direction of an HTML element‘s text</td>
+        <td>ltr - Default left-to-right text direction, i.e., English.<br/>rtl - Right-to-left text direction, i.e., Arabic.<br/>
+auto - The browser figures out the text direction based on the content
+        </td>
+    <tr>
+        <td><span class="attcolor">id</span></td>
+        <td>Used to specify a unique id for an HTML element. <br/>Cannot be shared across multiple elements within the same HTML document.</td>
+        <td>You can name this whatever you like, case sensitive, must contain one character. <br/>It cannot start with a number or contain whitespaces</td>
+    </tr>
+    <tr>
+      <td><span class="attcolor">href</span></td>
+      <td>Provides a link to a resource</td>
+      <td>stylesheet, another page, or document</td>
+    </tr>
+      <tr>
+        <td><span class="attcolor">rel</span></td>
+        <td>describes the link type for the element</td>
+    </tr>
+    <tr>
+        <td><span class="attcolor">src</span></td>
+        <td>Embeds resources into a document</td>
+        <td>url or file path</td>
+    </tr>
+    <tr>
+        <td><span class="attcolor">style</span></td>
+        <td>Specifies how an element will be rendered in a web browser.</td>
+        <td>specify property style</td>
+    </tr>
+      <tr>
+        <td><span class="attcolor">target</span></td>
+        <td>used to specify where the linked document should open when a user clicks on a link</td>
+        <td>_blank - opens a new tab</td>
+    </tr>
+    <tr>
+        <td><span class="attcolor">title</span></td>
+        <td>Contains and can display the specified information about the element it belongs to.</td>
+        <td>describe the title</td>
+    </tr>
+</table>
+
+<h2 id="comments">Comments</h2>
+<p>Used for documentation and excluding markup from being rendered.<br/>Syntax: <span class="commentcolor">&lt;!-- Comments go between these tags. --&gt;</span></p>
+
+<h2 id="elements">Elements</h2>
+<p><span class="elementcolor">Elements</span> are discrete components within an HTML document that generally consist of at least one tag but can have two tags with optional content. <br/>The tag name determines how the <span class="elementcolor">element</span> will be rendered in the HTML document. <br/><span class="elementcolor">Elements</span> can also have any number of attributes.</p>
+<p>Syntax: &lt;<span class="elementcolor">element</span>&gt; content &lt;/closing <span class="elementcolor">element</span>&gt;</p>
+<div class="eletable">
+<table class="eleone">
+    <tr>
+    <th><span class="elementcolor">Elements</span></th>
+    <th>Use</th>
+    </tr>
+    <tr>
+        <td><span class="elementcolor">a</span></td>
+        <td>Creates a link to another page or to a location in the current page.</td>
+    </tr>
+    <tr>
+        <td><span class="elementcolor">abbr</span></td>
+        <td>Indicates an acronym or abbreviation of a longer word or phrase.</td>
+    <tr>
+        <td><span class="elementcolor">acronym</span></td>
+        <td>Creates text that will be displayed when hovered over.</td>
+    </tr>
+    <tr>
+        <td><span class="elementcolor">audio</span></td>
+        <td>Represents an interface for adding audio content to the page.</td>
+    </tr>
+    <tr>
+        <td><span class="elementcolor">b</span></td>
+        <td>Renders text in boldface</td>
+    </tr>
+    <tr>
+        <td><span class="elementcolor">blockquote</span></td>
+        <td>Represents a section of a document which contains a longer quotation.</td>
+    </tr>
+    <tr>
+        <td><span class="elementcolor">br</span></td>
+        <td>Represents a break in text.</td>
+    </tr>
+    <tr>
+        <td><span class="elementcolor">button</span></td>
+        <td>Represents a button meant to be clicked by the user.</td>
+    </tr>
+    <tr>
+        <td><span class="elementcolor">canvas</span></td>
+        <td>Creates graphics and animations in the page for JavaScript and WebGL to interact with</td>
+    </tr>
+    <tr>
+        <td><span class="elementcolor">cite</span></td>
+        <td>Represents a citation to a referenced work.</td>
+    </tr>
+    <tr>
+        <td><span class="elementcolor">code</span></td>
+        <td>Represents source code contained in the text.</td>
+    </tr>
+    <tr>
+        <td><span class="elementcolor">col</span></td>
+        <td>Creates properties for table columns, including styling and attributes.</td>
+    </tr>
+    <tr>
+        <td><span class="elementcolor">datalist</span></td>
+        <td>Displays pre-defined values to a user while typing into an input box.</td>
+    </tr>
+    <tr>
+        <td><span class="elementcolor">dd</span></td>
+        <td>Describes details found inside a &lt;dl&gt; element.</td>
+    </tr>
+    <tr>
+        <td><span class="elementcolor">del</span></td>
+        <td>Renders strike-through text</td>
+    </tr>
+    <tr>
+        <td><span class="elementcolor">div</span></td>
+        <td>Represents a generic division of content.</td>
+    </tr>
+    <tr>
+        <td><span class="elementcolor">dl</span></td>
+        <td>Displays terms and details</td>
+    </tr>
+    <tr>
+        <td><span class="elementcolor">dt</span></td>
+        <td>Describes a term found inside a &lt;dl&gt; tag.</td>
+    </tr>
+    <tr>
+        <td><span class="elementcolor">em</span></td>
+        <td>Renders italicized text</td>
+    </tr>
+    <tr>
+        <td><span class="elementcolor">embed</span></td>
+        <td>Inserts external content.</td>
+    </tr>
+    <tr>
+        <td><span class="elementcolor">form</span></td>
+        <td>Represents an interface to collect and submit user supplied information.</td>
+    </tr>
+    <tr>
+        <td><span class="elementcolor">h1-h6</span></td>
+        <td>Represents a text heading for a section of content.</td>
+    </tr>
+    <tr>
+        <td><span class="elementcolor">head</span></td>
+        <td>Represents a collection of metadata related to the current document.</td>
+    </tr>
+    <tr>
+        <td><span class="elementcolor">hr</span></td>
+        <td>Represents a semantic, horizontal line break between text elements.</td>
+    </tr>
+    <tr>
+        <td><span class="elementcolor">html</span></td>
+        <td>Represents the entire HTML document.</td>
+    </tr>
+    <tr>
+        <td><span class="elementcolor">i</span></td>
+        <td>Renders italic text</td>
+    </tr>
+    <tr>
+        <td><span class="elementcolor">iframe</span></td>
+        <td>Represents a container used to embed a second web page inside the current one.</td>
+    </tr>
+    <tr>
+        <td><span class="elementcolor">img</span></td>
+        <td>Displays an image on the web page.</td>
+    </tr>
+    </table>
+    <table class="eletwo">
+    <tr>
+    <th><span class="elementcolor">Elements</span></th>
+    <th>Use</th>
+    </tr>
+    <tr>
+        <td><span class="elementcolor">input</span></td>
+        <td>Creates an interactive element.</td>
+    </tr>
+    <tr>
+        <td><span class="elementcolor">kbd</span></td>
+        <td>Emphasizes characters to look like keys on a keyboard.</td>
+    </tr>
+    <tr>
+        <td><span class="elementcolor">label</span></td>
+        <td>Identifies captions for other elements in an HTML document.</td>
+    </tr>
+    <tr>
+        <td><span class="elementcolor">li</span></td>
+        <td>Represents a single item in a list of items.</td>
+    </tr>
+    <tr>
+        <td><span class="elementcolor">link</span></td>
+        <td>Connects the current page with an external file.</td>
+    </tr>
+    <tr>
+        <td><span class="elementcolor">menu</span></td>
+        <td>Represents an unordered list of items with more semantic meaning than a regular ul element.</td>
+    </tr>
+    <tr>
+        <td><span class="elementcolor">meta</span></td>
+        <td>Represents an interface to provide metadata pertaining to the document.</td>
+    </tr>
+    <tr>
+        <td><span class="elementcolor">noscript</span></td>
+        <td>Displays content within if JavaScript is disabled in the browser or not supported.</td>
+    </tr>
+    <tr>
+        <td><span class="elementcolor">object</span></td>
+        <td>Represents an external resource.</td>
+    </tr>
+    <tr>
+        <td><span class="elementcolor">ol</span></td>
+        <td>Represents an ordered list of items.</td>
+    </tr>
+    <tr>
+        <td><span class="elementcolor">option</span></td>
+        <td>Represents one option in a dropdown created by the select tag.</td>
+    </tr>
+    <tr>
+        <td><span class="elementcolor">output</span></td>
+        <td>Displays the result of a calculation or user action.</td>
+    </tr>
+    <tr>
+        <td><span class="elementcolor">p</span></td>
+        <td>Contains and displays a block of text that defines a paragraph.</td>
+    </tr>
+    <tr>
+        <td><span class="elementcolor">param</span></td>
+        <td>Used to pass parameters to a resource defined in an object tag.</td>
+    </tr>
+    <tr>
+        <td><span class="elementcolor">picture</span></td>
+        <td>Represents multiple possible image sources to be applied to different devices and screen-sizes.</td>
+    </tr>
+    <tr>
+        <td><span class="elementcolor">q</span></td>
+        <td>Used to represent a brief inline quotation.</td>
+    </tr>
+    <tr>
+        <td><span class="elementcolor">s</span></td>
+        <td>Represents strike-through text that is no longer need, accurate, or correct.</td>
+    </tr>
+    <tr>
+        <td><span class="elementcolor">script</span></td>
+        <td>Used to insert runnable code into a document, usually JavaScript.</td>
+    </tr>
+    <tr>
+        <td><span class="elementcolor">select</span></td>
+        <td>Creates a drop-down list for the user to select from a number of option elements.</td>
+    </tr>
+    <tr>
+        <td><span class="elementcolor">source</span></td>
+        <td>Represents an interface for adding source content to the page.</td>
+    </tr>
+    <tr>
+        <td><span class="elementcolor">span</span></td>
+        <td>Used for grouping related text or elements for styling and scripting.</td>
+    </tr>
+    <tr>
+        <td><span class="elementcolor">strong</span></td>
+        <td>Used to identify text that is very important, or urgent.</td>
+    </tr>
+    <tr>
+        <td><span class="elementcolor">style</span></td>
+        <td>Applies CSS styles to an HTML document.</td>
+    </tr>
+    <tr>
+        <td><span class="elementcolor">table</span></td>
+        <td>Represents an interface for adding tabular data to the page.</td>
+    </tr>
+    <tr>
+        <td><span class="elementcolor">textarea</span></td>
+        <td>Displays multi-line plain-text input.</td>
+    </tr>
+    <tr>
+        <td><span class="elementcolor">track</span></td>
+        <td>An HTML element that specifies subtitles, closed captioning, and other text files for media elements</td>
+    </tr>
+    <tr>
+        <td><span class="elementcolor">u</span></td>
+        <td>Displays HTML text with a non-textual annotation. The default rendering of this is a solid underline.</td>
+    </tr>
+    <tr>
+        <td><span class="elementcolor">ul</span></td>
+        <td>Represents an unordered list of items.</td>
+    </tr>
+</table>
+</div>
+
+<h2 id="Entities">Entities</h2>
+<p>Entities are character sequences placed in the text of an HTML document to print out reserved characters which may otherwise be interpreted as HTML code by a browser. <br/>In fact, using reference numbers, an entity can represent any Unicode character. <br/>When parsing the HTML, a browser replaces the entity’s character sequence with the character it represents.</p>
+<p>Syntax:<br/>
+        entity by name - &name;<br/>
+        decimal Unicode number - &#number;<br/>
+        hexadecimal Unicode number - &#xnumber;<br/>
+    </p>
+
+
+<h2 id="favicon">Favicon</h2>
+<p>A favicon (short for “favorite icon”) is an icon that is displayed in the browser’s address bar and tab title for a website. <br/>It is used to help users quickly identify the website and distinguish it from other tabs or bookmarks.</p>
+<p>&lt;head&gt;    &lt;link rel="shortcut icon" type="image/x-icon" href="/path/to/favicon.ico" /&gt;    &lt;/head&gt;</p>
+
+<h2 id="filepaths">File Paths</h2>
+<p>A file path describes the location of a file in a website’s folder structure. They are used to link to external files.</p>
+
+<h2 id="forms">Forms</h2>
+<p>In HTML, forms are used for gathering and sending user input to an external source (like a server) for processing. <br/>This is done with the &lt;form&gt; element, which contains various labels and inputs.</p>
+<p>&lt;form&gt;    &lt;!-- Form elements --&gt;    &lt;/form&gt; </p>
+
+<h2 id="Headings">Headings</h2>
+<p>Among the HTML elements are the 6 heading elements. They are labeled 1-6, with 1 being the largest sized heading and 6 being the smallest. These are great for labeling different sections in a website:</p>
+<h1>Heading 1</h1>
+<h2>Heading 2</h2>
+<h3>Heading 3</h3>
+<h4>Heading 4</h4>
+<h5>Heading 5</h5>
+<h6>Heading 6</h6>
+
+<h2 id="iframes">iFrames</h2>
+<p>An IFrame (Inline Frame) is an HTML document embedded inside another HTML document on a website. <br/>The &lt;iframe&gt; element provides a smaller version of a browser window that contains various media, such as an advertisement, a YouTube video, etc. <br/>Some sites such as Youtube will provide IFrame markup for the user to embed instead of making one on their own.</p>
+
+<h2 id="images">Images</h2>
+<p>While many websites are primarily text, embedding images using HTML within a site allows for more lively pages that can be more attractive and informative to visitors.<br/> However, when serving images, there are concerns about the impact on page loading speeds as well as accessibility, so knowledge of how images can be best served to users is critical for good development.</p>
+<p>&lt;img src="logo.png" alt="Codecademy logo" /&gt;</p>
+
+<h2 id="links">Links</h2>
+<p>Links are used in HTML to add features to a web page including styling, functionality, hyperlinks, and navigation.<br/>The &lt;a&gt; anchor tag is used to create hyperlinks in an HTML document. <br/>The hyperlinks can point to other webpages, files on the same server, a location on the same page, or any other URL using the hyperlink reference href attribute.</p>
+
+<h2 id="semantichtml">Semantic HTML</h2>
+<p>Semantic HTML introduces meaning to the code we write. <br/>Developing with semantic HTML means using HTML tags that are representative of the content so that browsers can appropriately parse the content of the site.</p>
+<p>&lt;!-- Non Semantic HTML --&gt;  &lt;div id="footer"&gt;  &lt;p&gt;This is a footer&lt;/p&gt;  &lt;/div&gt;</p>
+<p>&lt;!-- Semantic HTML --&gt;  &lt;footer&gt;  &lt;p&gt;This is a footer.&lt;/p&gt;  &lt;/footer&gt;</p>
+
+<h2 id="tables">Tables</h2>
+<p>In HTML, a table is an element that allows data representation in two dimensions. These dimensions are columns and rows.</p>
+<p>&lt;table&gt;<br/>
+        &lt;tr&gt;<br/>
+        &lt;th&gt;Heading 1&lt;/th&gt;<br/>
+        &lt;/tr&gt;<br/>
+        &lt;tr&gt;<br/>
+          &lt;td&gt;Cell 1&lt;/td&gt;<br/>
+&lt;/tr&gt;<br/>
+      &lt;/table&gt;<br/>
+</p>
+
+<h2 id="tags">Tags</h2>
+<p>In HTML, tags are commonly defined as a set of characters constituting a formatted command for a web page. <br/>They are used for making elements for the web page’s markup.<br/> During the early days of the World Wide Web, tags were responsible for a majority of the web’s code.</p>
+<p>&lt;element-name&gt; content &lt;/element-name&gt;&lt;self-closing-element-tag /&gt;</p>
+  </body>
+</html>

@@ -1,0 +1,113 @@
+html {
+    background: #1E1E3F;
+}
+
+table {
+    background: #2D2B55;
+    text-align: center;
+    border: #A599E9 solid 1px;
+    border-collapse: collapse;
+    margin-left: auto;
+    margin-right: auto;   
+}
+
+tr {
+  color: #A599E9;
+}
+
+td {
+  border: #A599E9 solid 1px;
+  padding: 5px;
+}
+
+th {
+  border: #A599E9 solid 1px;
+  padding: 5px;
+  color: #B362FF
+}
+
+.toc {
+  margin-left: auto;
+  margin-right: auto;
+  text-decoration: #9EFFFF underline;
+}
+
+.atttable {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.attcolor {
+  color: white;
+}
+
+p {
+    color: #A599E9;
+    text-align: center;
+}
+
+.htmlparent {
+  text-align: center;
+}
+
+.htmlchild {
+  display: inline-block;
+  text-align: left;
+}
+
+h1 {
+    color: #9EFFFF;
+    text-align: center;
+}
+
+a {
+    text-decoration: none;
+    color: #B362FF;
+}
+
+h2 {
+    color: #9EFFFF;
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 0;
+}
+
+h3 {
+    color: #9EFFFF;
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 0;
+}
+
+.eletable {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.eleone {
+  margin-right: 10px;
+}
+
+.commentcolor{
+  color: #B362FF;
+}
+
+.elementcolor {
+  color: #FF628C;
+}
+
+h4 {
+  color: #9EFFFF;
+  text-align: center;
+}
+
+h5 {
+  color: #9EFFFF;
+  text-align: center;
+}
+
+h6 {
+  color: #9EFFFF;
+  text-align: center;
+}
